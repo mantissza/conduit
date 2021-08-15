@@ -29,9 +29,6 @@ def test_tc_001_registration():
 
     #  Új felhasználó hozzáadásának művelete
     def add_new_user(user):
-        time.sleep(5)
-        sign_up = driver.find_element_by_xpath("//a[@href='#/register']")
-        sign_up.click()
         for i in range(len(user)):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i])
         driver.find_element_by_tag_name("button").click()
@@ -53,6 +50,10 @@ def test_tc_001_registration():
     rand_user = [rand_username, rand_email, rand_password]
     # print(randUser)
 
+    sign_up = driver.find_element_by_xpath('//a[@href="#/register"]')
+    sign_up.click()
+    time.sleep(5)
+
     #  Űrlap kitöltése
     add_new_user(rand_user)
 
@@ -67,6 +68,7 @@ def test_tc_001_registration():
     assert current_title == excepted_title
     assert current_text == excepted_text
     driver.find_element_by_xpath("//*[@class='swal-button swal-button--confirm']").click()
+    time.sleep(2)
 
     #  Az új felhasználó automatikusan bejelentkezik regisztrációt követően. => Bejelentkezés sikerének ellenőrzése.
     excepted_username = rand_user[0]
