@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "con_tc_001_test",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "e9461c7aa74be1a9",
+        "parentUid" : "89c6a10abdf7e0583c8d8f6a2bc5203b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629046331122,
+          "stop" : 1629046333585,
+          "duration" : 2463
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "89c6a10abdf7e0583c8d8f6a2bc5203b"
+    }, {
+      "name" : "con_tc_002_test",
+      "children" : [ {
+        "name" : "test_tc_002_sign_in",
+        "uid" : "24a62cb42e33bc83",
+        "parentUid" : "ac1cf712f6ddb2e0d2d167c40641c575",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629046333675,
+          "stop" : 1629046335108,
+          "duration" : 1433
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ac1cf712f6ddb2e0d2d167c40641c575"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ],
+  "name" : "suites"
+}
