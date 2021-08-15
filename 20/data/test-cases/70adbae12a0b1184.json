@@ -1,0 +1,104 @@
+{
+  "uid" : "70adbae12a0b1184",
+  "name" : "test_tc_011_logout",
+  "fullName" : "tests.con_tc_011_test#test_tc_011_logout",
+  "historyId" : "ede8e6df1e87e05559ef619c7a4e2c3c",
+  "time" : {
+    "start" : 1629067516119,
+    "stop" : 1629067528082,
+    "duration" : 11963
+  },
+  "status" : "broken",
+  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'",
+  "statusTrace" : "def test_tc_011_logout():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        def navbar_check(excepted_length, filename):\n            #  Egy oldalon megjelenő maximális menüpontok számának vizsgálata\n            excepted_nav_item = excepted_length\n            current_nav_item = len(driver.find_elements_by_class_name('nav-link'))\n            assert current_nav_item == excepted_nav_item\n    \n            #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n            current_nav_item_list = []\n            for i in range(current_nav_item):\n                # elem = driver.find_element_by_xpath('//*[@class=\"nav-link\"][%i]' % (i + 1)).text\n                elem = driver.find_elements_by_class_name('nav-link')[i].text\n                current_nav_item_list.append(elem)\n    \n            excepted_nav_item_list = []\n            f = open(filename, 'r')\n            for i in range(int(f.readline())):\n                elem = f.readline().replace('\\n', '')\n                excepted_nav_item_list.append(elem)\n    \n            #  A két navigációs elemeket tartalmazó lista hosszának összevetése\n            assert len(current_nav_item_list) == len(excepted_nav_item_list)\n    \n            #  A két navigációs elemeket tartalmazó lista tartalmának összevetése\n            for i in range(len(current_nav_item_list)):\n                #  print(current_nav_item_list[i] + \"==\" + excepted_nav_item_list[i])\n                assert current_nav_item_list[i] == excepted_nav_item_list[i]\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Bejelentkezést követő ellenőrzés\n>       navbar_check(7, 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt')\n\ntests/con_tc_011_test.py:80: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nexcepted_length = 7\nfilename = 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'\n\n    def navbar_check(excepted_length, filename):\n        #  Egy oldalon megjelenő maximális menüpontok számának vizsgálata\n        excepted_nav_item = excepted_length\n        current_nav_item = len(driver.find_elements_by_class_name('nav-link'))\n        assert current_nav_item == excepted_nav_item\n    \n        #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n        current_nav_item_list = []\n        for i in range(current_nav_item):\n            # elem = driver.find_element_by_xpath('//*[@class=\"nav-link\"][%i]' % (i + 1)).text\n            elem = driver.find_elements_by_class_name('nav-link')[i].text\n            current_nav_item_list.append(elem)\n    \n        excepted_nav_item_list = []\n>       f = open(filename, 'r')\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'\n\ntests/con_tc_011_test.py:42: FileNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'",
+    "statusTrace" : "def test_tc_011_logout():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        def navbar_check(excepted_length, filename):\n            #  Egy oldalon megjelenő maximális menüpontok számának vizsgálata\n            excepted_nav_item = excepted_length\n            current_nav_item = len(driver.find_elements_by_class_name('nav-link'))\n            assert current_nav_item == excepted_nav_item\n    \n            #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n            current_nav_item_list = []\n            for i in range(current_nav_item):\n                # elem = driver.find_element_by_xpath('//*[@class=\"nav-link\"][%i]' % (i + 1)).text\n                elem = driver.find_elements_by_class_name('nav-link')[i].text\n                current_nav_item_list.append(elem)\n    \n            excepted_nav_item_list = []\n            f = open(filename, 'r')\n            for i in range(int(f.readline())):\n                elem = f.readline().replace('\\n', '')\n                excepted_nav_item_list.append(elem)\n    \n            #  A két navigációs elemeket tartalmazó lista hosszának összevetése\n            assert len(current_nav_item_list) == len(excepted_nav_item_list)\n    \n            #  A két navigációs elemeket tartalmazó lista tartalmának összevetése\n            for i in range(len(current_nav_item_list)):\n                #  print(current_nav_item_list[i] + \"==\" + excepted_nav_item_list[i])\n                assert current_nav_item_list[i] == excepted_nav_item_list[i]\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Bejelentkezést követő ellenőrzés\n>       navbar_check(7, 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt')\n\ntests/con_tc_011_test.py:80: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nexcepted_length = 7\nfilename = 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'\n\n    def navbar_check(excepted_length, filename):\n        #  Egy oldalon megjelenő maximális menüpontok számának vizsgálata\n        excepted_nav_item = excepted_length\n        current_nav_item = len(driver.find_elements_by_class_name('nav-link'))\n        assert current_nav_item == excepted_nav_item\n    \n        #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n        current_nav_item_list = []\n        for i in range(current_nav_item):\n            # elem = driver.find_element_by_xpath('//*[@class=\"nav-link\"][%i]' % (i + 1)).text\n            elem = driver.find_elements_by_class_name('nav-link')[i].text\n            current_nav_item_list.append(elem)\n    \n        excepted_nav_item_list = []\n>       f = open(filename, 'r')\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'\n\ntests/con_tc_011_test.py:42: FileNotFoundError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "377bec432d828a19",
+      "name" : "log",
+      "source" : "377bec432d828a19.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "7bf2163fd6788711",
+      "name" : "stderr",
+      "source" : "7bf2163fd6788711.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_011_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az42-898"
+  }, {
+    "name" : "thread",
+    "value" : "3640-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_011_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "7287c8aaa5e3f3bf",
+        "reportUrl" : "https://mantissza.github.io/conduit/19//#testresult/7287c8aaa5e3f3bf",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'navitems_login.txt'",
+        "time" : {
+          "start" : 1629063815158,
+          "stop" : 1629063827213,
+          "duration" : 12055
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "70adbae12a0b1184.json",
+  "parameterValues" : [ ]
+}

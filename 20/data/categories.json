@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//fieldset[1]/input\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "7bc9aa7cb7675dd9",
+        "parentUid" : "58416d94307c2a808a681680df0e7fa6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629067452515,
+          "stop" : 1629067470136,
+          "duration" : 17621
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "58416d94307c2a808a681680df0e7fa6"
+    }, {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\titles.txt'",
+      "children" : [ {
+        "name" : "test_tc_004_data_list",
+        "uid" : "884da5043deaeab7",
+        "parentUid" : "35e1070159c3188c4fda03e3dd49acaf",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629067493891,
+          "stop" : 1629067516110,
+          "duration" : 22219
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "35e1070159c3188c4fda03e3dd49acaf"
+    }, {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\navitems_login.txt'",
+      "children" : [ {
+        "name" : "test_tc_011_logout",
+        "uid" : "70adbae12a0b1184",
+        "parentUid" : "fb06d6cb8c96462be3a2e74282c74d18",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629067516119,
+          "stop" : 1629067528082,
+          "duration" : 11963
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fb06d6cb8c96462be3a2e74282c74d18"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
