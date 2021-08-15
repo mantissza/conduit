@@ -70,7 +70,7 @@ def test_tc_004_data_list():
         current_content_title_list.append(elem)
 
     excepted_content_title_list = []
-    f = open('titles.txt', 'r')
+    f = open('C:\\Users\\user\\PycharmProjects\\conduit\\tests\\titles.txt', 'r')
     for i in range(int(f.readline())):
         elem = f.readline().replace('\n', '')
         excepted_content_title_list.append(elem)

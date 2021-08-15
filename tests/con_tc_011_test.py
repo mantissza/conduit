@@ -77,14 +77,14 @@ def test_tc_011_logout():
     assert current_username == excepted_username
 
     #  Bejelentkezést követő ellenőrzés
-    navbar_check(7, 'navitems_login.txt')
+    navbar_check(7, 'C:\\Users\\user\\PycharmProjects\\conduit\\tests\\navitems_login.txt')
 
     #  KIJELENTKEZÉS ikonra kattint
     log_out_icon = driver.find_element_by_class_name('ion-android-exit')
     log_out_icon.click()
 
     #  Kijelentkezést követő ellenőrzés
-    navbar_check(4, 'navitems_logout.txt')
+    navbar_check(4, 'C:\\Users\\user\\PycharmProjects\\conduit\\tests\\navitems_logout.txt')
 
     #  Böngésző bezárása
     driver.close()

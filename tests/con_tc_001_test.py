@@ -31,8 +31,9 @@ def test_tc_001_registration():
     def add_new_user(user):
         time.sleep(10)
         #  sign_up = driver.find_element_by_xpath("//a[@href='#/register']")
-        sign_up = driver.find_element_by_xpath('//*[@class="nav-item"][3]/a')
-        sign_up.click()
+        #  sign_up.click()
+        sign_up_url = 'http://localhost:1667/#/register'
+        driver.get(sign_up_url)
         for i in range(len(user)):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i])
         driver.find_element_by_tag_name("button").click()
@@ -45,11 +46,12 @@ def test_tc_001_registration():
     time.sleep(5)
 
     #  Bemeneti értékek
+    #  Fontos: Password must be 8 characters long and include 1 number, 1 uppercase letter, and 1 lowercase letter.
     domain = random.choice(['com', 'hu', 'ru', 'de', 'cz'])
     rand_username = charset_rand(random.randint(6, int(15)))
     rand_email = (charset_rand(random.randint(6, int(15))) + '@' +
                   charset_rand(random.randint(6, int(15))) + '.' + domain).lower()
-    rand_password = charset_rand(random.randint(6, int(30)))
+    rand_password = charset_rand(random.randint(8, int(30))) + '1aA'
     rand_user = [rand_username, rand_email, rand_password]
     # print(randUser)
 
