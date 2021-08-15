@@ -1,0 +1,11 @@
+Regisztráció: Az alkalmazásba be lehet regisztrálni, név, emailcím és jelszó megadásával.
+Bejelentkezés: Az alkalmazásba be lehet jelentkezni egy meglévő felhasználói fiókkal.
+Adatkezelési nyilatkozat használata: Az adatkezelési nyilatkozat elutasítására, elfogadására, valamint megtekintésére van lehetőség.
+Adatok listázása: A felhasználók által rögzített bejegyzések megjelennek publikusan a főoldalon.
+Több oldalas lista bejárása: TODO: automatizálandó feladat (EF: global feed-be létrehozni elegendő (pl.: 100) elemet az oldalak előidézéséhez. A létrehozott oldalak bejárása.)
+Új adat bevitel: Bejelentkezett felhasználóval lehet új bejegyzést közzétenni a felületen.
+Ismételt és sorozatos adatbevitel adatforrásból: TODO: automatizálandó feladat (100 randomizált bejegyzés közzététele automatizációval.)
+Meglévő adat módosítás: A bejelentkezett felhasználó által a múltban létrehozott bejegyzések módosítására adott a lehetőség.
+Adat vagy adatok törlése: A bejelentkezett felhasználó által a múltban létrehozott bejegyzések törlésére adott a lehetőség.
+Adatok lementése felületről: TODO: automatizálandó feladat (EF: global feed-be létrehozni elegendő (pl.: 100) elemet. Ezen elemeket ki kell menteni egy *.txt file-ba, majd összevetni a randomizált elemekkel.)
+Kijelentkezés: Az alkalmazásba bejelentkezett felhasználónak lehetősége van kijelentkeznie a felületről.
