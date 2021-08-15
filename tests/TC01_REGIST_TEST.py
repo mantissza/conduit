@@ -25,7 +25,7 @@ chrome_options.headless = True
 #         LOGIN
 ####################################################
 
-def test_TC01_regist():
+def test_registration():
 
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     URL = "http://localhost:1667/#/"
