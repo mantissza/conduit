@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@class=\"nav-item\"][3]/a\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "482f814318abcdf2",
+        "parentUid" : "ab5e0d968e9257f6cef78b6da34f38ed",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629063752016,
+          "stop" : 1629063768774,
+          "duration" : 16758
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ab5e0d968e9257f6cef78b6da34f38ed"
+    }, {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'",
+      "children" : [ {
+        "name" : "test_tc_004_data_list",
+        "uid" : "16ee9ced079750bc",
+        "parentUid" : "dd1fac6c4c978550a54838f025a29bc2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629063792856,
+          "stop" : 1629063815148,
+          "duration" : 22292
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dd1fac6c4c978550a54838f025a29bc2"
+    }, {
+      "name" : "FileNotFoundError: [Errno 2] No such file or directory: 'navitems_login.txt'",
+      "children" : [ {
+        "name" : "test_tc_011_logout",
+        "uid" : "7287c8aaa5e3f3bf",
+        "parentUid" : "705138f13eee9c5f6ff178c33cc3da75",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629063815158,
+          "stop" : 1629063827213,
+          "duration" : 12055
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "705138f13eee9c5f6ff178c33cc3da75"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
