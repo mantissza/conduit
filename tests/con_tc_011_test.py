@@ -2,6 +2,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
 
 
 chrome_options = Options()
@@ -77,14 +80,15 @@ def test_tc_011_logout():
     assert current_username == excepted_username
 
     #  Bejelentkezést követő ellenőrzés
-    navbar_check(7, 'C:\\Users\\user\\PycharmProjects\\conduit\\tests\\navitems_login.txt')
+    TEST_DATA_DIR = Path(__file__).resolve().parent / 'data'
+    navbar_check(7, TEST_DATA_DIR / 'navitems_login.txt')
 
     #  KIJELENTKEZÉS ikonra kattint
     log_out_icon = driver.find_element_by_class_name('ion-android-exit')
     log_out_icon.click()
 
     #  Kijelentkezést követő ellenőrzés
-    navbar_check(4, 'C:\\Users\\user\\PycharmProjects\\conduit\\tests\\navitems_logout.txt')
+    navbar_check(4, TEST_DATA_DIR / 'navitems_logout.txt')
 
     #  Böngésző bezárása
     driver.close()

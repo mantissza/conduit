@@ -2,7 +2,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
 
 chrome_options = Options()
 chrome_options.headless = True
@@ -70,7 +72,8 @@ def test_tc_004_data_list():
         current_content_title_list.append(elem)
 
     excepted_content_title_list = []
-    f = open('C:\\Users\\user\\PycharmProjects\\conduit\\tests\\titles.txt', 'r')
+    TEST_DATA_DIR = Path(__file__).resolve().parent / 'data'
+    f = open(TEST_DATA_DIR / 'titles.txt', 'r')
     for i in range(int(f.readline())):
         elem = f.readline().replace('\n', '')
         excepted_content_title_list.append(elem)
