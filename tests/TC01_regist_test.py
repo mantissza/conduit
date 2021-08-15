@@ -24,7 +24,7 @@ import sys
 
 def test_TC01_regist():
     opt = Options()
-    # opt.headless = True
+    opt.headless = True
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
     URL = "http://localhost:1667/#/"
     driver.get(URL)
