@@ -1,0 +1,26 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "con_tc_001_test",
+      "children" : [ {
+        "name" : "test_registration",
+        "uid" : "3751e1e2abbc5da8",
+        "parentUid" : "89c6a10abdf7e0583c8d8f6a2bc5203b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629035069273,
+          "stop" : 1629035072021,
+          "duration" : 2748
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "89c6a10abdf7e0583c8d8f6a2bc5203b"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ],
+  "name" : "suites"
+}
