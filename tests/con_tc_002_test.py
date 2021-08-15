@@ -6,6 +6,7 @@ import time
 
 chrome_options = Options()
 chrome_options.headless = True
+chrome_options.add_argument('--disable-gpu')
 
 
 def test_tc_002_sign_in():
