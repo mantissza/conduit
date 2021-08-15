@@ -7,6 +7,9 @@ import random
 import string
 import sys
 
+chrome_options = Options()
+chrome_options.headless = True
+
 
 ####################################################
 #  PYTHON FUNCTIONS
@@ -23,9 +26,8 @@ import sys
 ####################################################
 
 def test_TC01_regist():
-    opt = Options()
-    opt.headless = True
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
+
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     URL = "http://localhost:1667/#/"
     driver.get(URL)
     assert True
@@ -34,13 +36,11 @@ def test_TC01_regist():
 ####################################################
 #       LOG OUT
 ####################################################
-# logout_btn = driver.find_element_by_xpath('//*[@id="navbarSupportedContent"]/ul/li/a')
-#
-# logout_btn.click()
+
 
 ####################################################
 # The END of the whole process #
 ####################################################
 
-#  driver.close()
+    driver.close()
 
