@@ -30,7 +30,8 @@ def test_tc_001_registration():
     #  Új felhasználó hozzáadásának művelete
     def add_new_user(user):
         time.sleep(10)
-        sign_up = driver.find_element_by_xpath("//a[@href='#/register']")
+        #  sign_up = driver.find_element_by_xpath("//a[@href='#/register']")
+        sign_up = driver.find_element_by_xpath('//*[@class="nav-item"][3]/a')
         sign_up.click()
         for i in range(len(user)):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i])
