@@ -41,6 +41,7 @@ def add_new_user(user):
 
 try:
     driver.get(url)
+    time.sleep(5)
 
     #  Bemeneti értékek
     domain = random.choice(['com', 'hu', 'ru', 'de', 'cz'])

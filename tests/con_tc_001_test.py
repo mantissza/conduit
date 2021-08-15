@@ -41,6 +41,7 @@ def test_tc_001_registration():
     ####################################################
 
     driver.get(url)
+    time.sleep(5)
 
     #  Bemeneti értékek
     domain = random.choice(['com', 'hu', 'ru', 'de', 'cz'])

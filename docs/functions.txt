@@ -9,3 +9,10 @@ Meglévő adat módosítás: A bejelentkezett felhasználó által a múltban l�
 Adat vagy adatok törlése: A bejelentkezett felhasználó által a múltban létrehozott bejegyzések törlésére adott a lehetőség.
 Adatok lementése felületről: TODO: automatizálandó feladat (EF: global feed-be létrehozni elegendő (pl.: 100) elemet. Ezen elemeket ki kell menteni egy *.txt file-ba, majd összevetni a randomizált elemekkel.)
 Kijelentkezés: Az alkalmazásba bejelentkezett felhasználónak lehetősége van kijelentkeznie a felületről.
+
+Alapértelmezett felhasználók:
+testuser1@example.com / Abcd123$
+testuser2@example.com / Abcd123$
+testuser3@example.com / Abcd123$
+testuser4@example.com / Abcd123$
+testuser5@example.com / Abcd123$

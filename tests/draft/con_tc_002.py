@@ -31,6 +31,7 @@ def sign_in_test_user(user):
 
 try:
     driver.get(url)
+    time.sleep(5)
 
     #  Bemeneti értékek
     test_username = 'testuser1'

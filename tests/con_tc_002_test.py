@@ -32,6 +32,7 @@ def test_tc_002_sign_in():
     ####################################################
 
     driver.get(url)
+    time.sleep(5)
 
     #  Bemeneti értékek
     test_username = 'testuser1'
