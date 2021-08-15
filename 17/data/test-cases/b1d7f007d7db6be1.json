@@ -1,0 +1,114 @@
+{
+  "uid" : "b1d7f007d7db6be1",
+  "name" : "test_tc_002_sign_in",
+  "fullName" : "tests.con_tc_002_test#test_tc_002_sign_in",
+  "historyId" : "bf41b6c323e9d3f4221306768d559586",
+  "time" : {
+    "start" : 1629051677901,
+    "stop" : 1629051694979,
+    "duration" : 17078
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "30970e1f01e87876",
+      "name" : "log",
+      "source" : "30970e1f01e87876.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "bf9063a1971ddef3",
+      "name" : "stderr",
+      "source" : "bf9063a1971ddef3.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_002_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-942"
+  }, {
+    "name" : "thread",
+    "value" : "3637-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_002_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "e58416c523105244",
+        "reportUrl" : "https://mantissza.github.io/conduit/16//#testresult/e58416c523105244",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629049041768,
+          "stop" : 1629049053681,
+          "duration" : 11913
+        }
+      }, {
+        "uid" : "fb6b1b40204431c7",
+        "reportUrl" : "https://mantissza.github.io/conduit/15//#testresult/fb6b1b40204431c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629048926319,
+          "stop" : 1629048933414,
+          "duration" : 7095
+        }
+      }, {
+        "uid" : "24a62cb42e33bc83",
+        "reportUrl" : "https://mantissza.github.io/conduit/14//#testresult/24a62cb42e33bc83",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+        "time" : {
+          "start" : 1629046333675,
+          "stop" : 1629046335108,
+          "duration" : 1433
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b1d7f007d7db6be1.json",
+  "parameterValues" : [ ]
+}
