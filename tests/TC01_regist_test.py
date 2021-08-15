@@ -31,6 +31,8 @@ def test_TC01_regist():
     URL = "http://localhost:1667/#/"
     driver.get(URL)
     assert True
+    assert True
+    assert True
 
 
 ####################################################
