@@ -20,6 +20,7 @@ def test_tc_002_sign_in():
 
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
+        time.sleep(5)
         sign_in = driver.find_element_by_xpath("//a[@href='#/login']")
         sign_in.click()
         for i in range(len(user)-1):
