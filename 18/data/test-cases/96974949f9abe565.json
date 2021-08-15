@@ -1,0 +1,89 @@
+{
+  "uid" : "96974949f9abe565",
+  "name" : "test_tc_004_data_list",
+  "fullName" : "tests.con_tc_004_test#test_tc_004_data_list",
+  "historyId" : "6f846e44e75602950309c4fbe5921b52",
+  "time" : {
+    "start" : 1629056223546,
+    "stop" : 1629056244726,
+    "duration" : 21180
+  },
+  "status" : "broken",
+  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'",
+  "statusTrace" : "def test_tc_004_data_list():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            time.sleep(5)\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése.\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Bal felső sarokban található conduit ikon vizsgálata, főoldalra navigálás\n        excepted_conduit_link = \"http://localhost:1667/#/\"\n        current_conduit_link = driver.find_element_by_xpath('//*[@id=\"app\"]/nav/div/a').get_attribute('href')\n        print(current_conduit_link)\n        assert current_conduit_link == excepted_conduit_link\n        driver.find_element_by_xpath('//*[@id=\"app\"]/nav/div/a').click()\n        time.sleep(5)\n    \n        #  Egy oldalon megjelenő maximális bejegyzések számának vizsgálata\n        excepted_page_per_content = 11\n        current_page_per_content = len(driver.find_elements_by_class_name('article-preview'))\n        assert current_page_per_content == excepted_page_per_content\n    \n        #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n        current_content_title_list = []\n        for i in range(current_page_per_content):\n            elem = driver.find_element_by_xpath('//*[@class=\"article-preview\"][%i]/a/h1' % (i + 1)).text\n            current_content_title_list.append(elem)\n    \n        excepted_content_title_list = []\n>       f = open('titles.txt', 'r')\nE       FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'\n\ntests/con_tc_004_test.py:73: FileNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'",
+    "statusTrace" : "def test_tc_004_data_list():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            time.sleep(5)\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése.\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Bal felső sarokban található conduit ikon vizsgálata, főoldalra navigálás\n        excepted_conduit_link = \"http://localhost:1667/#/\"\n        current_conduit_link = driver.find_element_by_xpath('//*[@id=\"app\"]/nav/div/a').get_attribute('href')\n        print(current_conduit_link)\n        assert current_conduit_link == excepted_conduit_link\n        driver.find_element_by_xpath('//*[@id=\"app\"]/nav/div/a').click()\n        time.sleep(5)\n    \n        #  Egy oldalon megjelenő maximális bejegyzések számának vizsgálata\n        excepted_page_per_content = 11\n        current_page_per_content = len(driver.find_elements_by_class_name('article-preview'))\n        assert current_page_per_content == excepted_page_per_content\n    \n        #  Megjelenő bejegyzések címeinek összevetése egy külső txt listával.\n        current_content_title_list = []\n        for i in range(current_page_per_content):\n            elem = driver.find_element_by_xpath('//*[@class=\"article-preview\"][%i]/a/h1' % (i + 1)).text\n            current_content_title_list.append(elem)\n    \n        excepted_content_title_list = []\n>       f = open('titles.txt', 'r')\nE       FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'\n\ntests/con_tc_004_test.py:73: FileNotFoundError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2253f8008ef3d1de",
+      "name" : "log",
+      "source" : "2253f8008ef3d1de.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "3c61ecfd9da3013a",
+      "name" : "stdout",
+      "source" : "3c61ecfd9da3013a.txt",
+      "type" : "text/plain",
+      "size" : 25
+    }, {
+      "uid" : "6b5b0b14e03081a4",
+      "name" : "stderr",
+      "source" : "6b5b0b14e03081a4.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_004_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3666-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_004_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "96974949f9abe565.json",
+  "parameterValues" : [ ]
+}
