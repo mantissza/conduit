@@ -87,7 +87,7 @@ def test_tc_009_delete_content():
     time.sleep(5)
 
     #  Példa bejegyzés létrehozása
-    sample_content = ['Math Guy', 'Checkmate, gamer...',
+    sample_content = ['Math Boi', 'Checkmate, gamer...',
                       'Toxic productivity or self-improvement? Choose wisely.', 'martian']
     new_content(sample_content)
 
@@ -108,9 +108,9 @@ def test_tc_009_delete_content():
     #  A bejegyzés címét alakítsuk sub url formátumúvá
     format_title_to_href = sample_content[0].lower().replace(' ', '-')
 
-    #  A felhasználó egyéni feedjére belépve ellenőrizzük, hogy létezik-e még post az imánt megszűnt url-el.
+    #  A felhasználó egyéni feedjére belépve ellenőrizzük, hogy létezik-e még post az imént megszűnt url-el.
     is_exist_deleted_post = check_exists_by_xpath('//a[contains(@href,"%s")]' % format_title_to_href)
-    assert is_exist_deleted_post
+    assert not is_exist_deleted_post
 
     #  KIJELENTKEZÉS
     log_out_icon = driver.find_element_by_class_name('ion-android-exit')
