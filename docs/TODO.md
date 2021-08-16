@@ -63,5 +63,5 @@ tesztesetek)
 #Negyedik hét
 
 - [x] Test Report elkészítése
-- [ ] Prezentáció elkészítése
+- [x] Prezentáció elkészítése
 
