@@ -1,0 +1,51 @@
+[ {
+  "uid" : "9c90121aada7c0e6",
+  "name" : "test_tc_002_sign_in",
+  "time" : {
+    "start" : 1629072061007,
+    "stop" : 1629072077941,
+    "duration" : 16934
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d74810496391d30",
+  "name" : "test_tc_011_logout",
+  "time" : {
+    "start" : 1629072107016,
+    "stop" : 1629072119248,
+    "duration" : 12232
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c7d8582b0f2991d8",
+  "name" : "test_tc_001_registration",
+  "time" : {
+    "start" : 1629072034735,
+    "stop" : 1629072060996,
+    "duration" : 26261
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "58c75b14cda1898c",
+  "name" : "test_tc_003_cookie",
+  "time" : {
+    "start" : 1629072077945,
+    "stop" : 1629072084707,
+    "duration" : 6762
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fab0ff42b804c94b",
+  "name" : "test_tc_004_data_list",
+  "time" : {
+    "start" : 1629072084710,
+    "stop" : 1629072107012,
+    "duration" : 22302
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
