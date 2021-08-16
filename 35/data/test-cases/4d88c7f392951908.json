@@ -1,0 +1,83 @@
+{
+  "uid" : "4d88c7f392951908",
+  "name" : "test_tc_009_delete_content",
+  "fullName" : "tests.con_tc_009_test#test_tc_009_delete_content",
+  "historyId" : "bc08472d3717aa328b89f00334aac319",
+  "time" : {
+    "start" : 1629111662591,
+    "stop" : 1629111698203,
+    "duration" : 35612
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False",
+  "statusTrace" : "def test_tc_009_delete_content():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Létezik e a keresett xpath? fg\n        def check_exists_by_xpath(xpath):\n            try:\n                driver.find_element_by_xpath(xpath)\n            except NoSuchElementException:\n                return False\n            return True\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        #  Új bejegyzés létrehozásához, valamint a módosítási felület felülírásához egyaránt használható\n        def fill_the_content_blank(content_list_cp):\n            title, subtitle, content, tag = content_list_cp[0], content_list_cp[1], content_list_cp[2], content_list_cp[3]\n            #  Új bejegyzés űrlap kitöltése\n            input_data_article = [title, subtitle, content, tag]\n            for i in range(len(input_data_article)-2):\n                title_obj = driver.find_element_by_xpath(\"//fieldset[@class='form-group'][%i]/input\" % (i + 1))\n                title_obj.clear()\n                title_obj.send_keys(input_data_article[i])\n            content_obj = driver.find_element_by_xpath(\"//fieldset[@class='form-group'][3]/textarea\")\n            content_obj.clear()\n            content_obj.send_keys(input_data_article[2])\n            #  Régi tagek törlése\n            # tag_old = driver.find_elements_by_xpath('//fieldset[@class=\"form-group\"][4]//i[@class=\"ti-icon-close\"]')\n            # print(len(tag_old))\n            # for j in range(len(tag_old)):\n            #     driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//i[@class=\"ti-icon-close\"][%j]' % (j + 1)).click()\n            #     time.sleep(2)\n            tag_obj = driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//input')\n            tag_obj.clear()\n            tag_obj.send_keys(input_data_article[3])\n            time.sleep(3)\n    \n        def new_content(cont_list):\n            #  Új bejegyzés létrehozása\n            new_article = driver.find_element_by_class_name('ion-compose')\n            new_article.click()\n            time.sleep(5)\n            fill_the_content_blank(cont_list)\n            #  Bejegyzés feltöltése\n            driver.find_element_by_tag_name(\"button\").click()\n            time.sleep(5)\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Példa bejegyzés létrehozása\n        sample_content = ['Math Guy', 'Checkmate, gamer...',\n                          'Toxic productivity or self-improvement? Choose wisely.', 'martian']\n        new_content(sample_content)\n    \n        #  Létezik a Törlésre szolgáló gomb?\n        is_exist_delete_btn = check_exists_by_xpath('//button/span[contains(text(), \"Delete\")]')\n        assert is_exist_delete_btn\n    \n        #  Létrehozást követő törlés folyamata\n        del_btn = driver.find_element_by_xpath('//button[contains(@class,\"btn-outline-danger\")]')\n        del_btn.click()\n        time.sleep(5)\n    \n        #  Saját bejegyzések között ellenőrizzük, hogy valóban törölve lett-e a tétel.\n        user_menu = driver.find_element_by_xpath('//a[contains(@href,\"%s\")]' % test_username)\n        user_menu.click()\n        time.sleep(5)\n    \n        #  A bejegyzés címét alakítsuk sub url formátumúvá\n        format_title_to_href = sample_content[0].lower().replace(' ', '-')\n    \n        #  A felhasználó egyéni feedjére belépve ellenőrizzük, hogy létezik-e még post az imánt megszűnt url-el.\n        is_exist_deleted_post = check_exists_by_xpath('//a[contains(@href,\"%s\")]' % format_title_to_href)\n>       assert is_exist_deleted_post\nE       assert False\n\ntests/con_tc_009_test.py:113: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False",
+    "statusTrace" : "def test_tc_009_delete_content():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Létezik e a keresett xpath? fg\n        def check_exists_by_xpath(xpath):\n            try:\n                driver.find_element_by_xpath(xpath)\n            except NoSuchElementException:\n                return False\n            return True\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        #  Új bejegyzés létrehozásához, valamint a módosítási felület felülírásához egyaránt használható\n        def fill_the_content_blank(content_list_cp):\n            title, subtitle, content, tag = content_list_cp[0], content_list_cp[1], content_list_cp[2], content_list_cp[3]\n            #  Új bejegyzés űrlap kitöltése\n            input_data_article = [title, subtitle, content, tag]\n            for i in range(len(input_data_article)-2):\n                title_obj = driver.find_element_by_xpath(\"//fieldset[@class='form-group'][%i]/input\" % (i + 1))\n                title_obj.clear()\n                title_obj.send_keys(input_data_article[i])\n            content_obj = driver.find_element_by_xpath(\"//fieldset[@class='form-group'][3]/textarea\")\n            content_obj.clear()\n            content_obj.send_keys(input_data_article[2])\n            #  Régi tagek törlése\n            # tag_old = driver.find_elements_by_xpath('//fieldset[@class=\"form-group\"][4]//i[@class=\"ti-icon-close\"]')\n            # print(len(tag_old))\n            # for j in range(len(tag_old)):\n            #     driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//i[@class=\"ti-icon-close\"][%j]' % (j + 1)).click()\n            #     time.sleep(2)\n            tag_obj = driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//input')\n            tag_obj.clear()\n            tag_obj.send_keys(input_data_article[3])\n            time.sleep(3)\n    \n        def new_content(cont_list):\n            #  Új bejegyzés létrehozása\n            new_article = driver.find_element_by_class_name('ion-compose')\n            new_article.click()\n            time.sleep(5)\n            fill_the_content_blank(cont_list)\n            #  Bejegyzés feltöltése\n            driver.find_element_by_tag_name(\"button\").click()\n            time.sleep(5)\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Példa bejegyzés létrehozása\n        sample_content = ['Math Guy', 'Checkmate, gamer...',\n                          'Toxic productivity or self-improvement? Choose wisely.', 'martian']\n        new_content(sample_content)\n    \n        #  Létezik a Törlésre szolgáló gomb?\n        is_exist_delete_btn = check_exists_by_xpath('//button/span[contains(text(), \"Delete\")]')\n        assert is_exist_delete_btn\n    \n        #  Létrehozást követő törlés folyamata\n        del_btn = driver.find_element_by_xpath('//button[contains(@class,\"btn-outline-danger\")]')\n        del_btn.click()\n        time.sleep(5)\n    \n        #  Saját bejegyzések között ellenőrizzük, hogy valóban törölve lett-e a tétel.\n        user_menu = driver.find_element_by_xpath('//a[contains(@href,\"%s\")]' % test_username)\n        user_menu.click()\n        time.sleep(5)\n    \n        #  A bejegyzés címét alakítsuk sub url formátumúvá\n        format_title_to_href = sample_content[0].lower().replace(' ', '-')\n    \n        #  A felhasználó egyéni feedjére belépve ellenőrizzük, hogy létezik-e még post az imánt megszűnt url-el.\n        is_exist_deleted_post = check_exists_by_xpath('//a[contains(@href,\"%s\")]' % format_title_to_href)\n>       assert is_exist_deleted_post\nE       assert False\n\ntests/con_tc_009_test.py:113: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f12d5d7fd218bf2d",
+      "name" : "log",
+      "source" : "f12d5d7fd218bf2d.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "6e551b74310999d2",
+      "name" : "stderr",
+      "source" : "6e551b74310999d2.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_009_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az74-944"
+  }, {
+    "name" : "thread",
+    "value" : "3649-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_009_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4d88c7f392951908.json",
+  "parameterValues" : [ ]
+}

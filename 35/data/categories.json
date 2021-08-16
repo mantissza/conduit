@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body//a[contains(@href,'register')]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "e78e260860268922",
+        "parentUid" : "d42c9081bcd0661a4abb1a341970d312",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629111389939,
+          "stop" : 1629111402360,
+          "duration" : 12421
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d42c9081bcd0661a4abb1a341970d312"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False",
+      "children" : [ {
+        "name" : "test_tc_009_delete_content",
+        "uid" : "4d88c7f392951908",
+        "parentUid" : "8d89788b03808d3beec6ddf8e7d75f3d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629111662591,
+          "stop" : 1629111698203,
+          "duration" : 35612
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8d89788b03808d3beec6ddf8e7d75f3d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
