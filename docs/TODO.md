@@ -23,7 +23,7 @@ táblázatos fájlok formájában)
 - [x] | con_tc_007_test.py | Ismételt és sorozatos adatbevitel adatforrásból
 - [x] | con_tc_008_test.py | Meglévő adat módosítás
 - [x] | con_tc_009_test.py | Adat vagy adatok törlése
-- [ ] | con_tc_010_test.py | Adatok lementése felületről
+- [x] | con_tc_010_test.py | Adatok lementése felületről
 - [x] | con_tc_011_test.py | Kijelentkezés
 
 ---
@@ -62,5 +62,6 @@ tesztesetek)
 
 #Negyedik hét
 
+- [x] Test Report elkészítése
 - [ ] Prezentáció elkészítése
 
