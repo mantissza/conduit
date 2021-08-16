@@ -14,23 +14,23 @@ táblázatos fájlok formájában)
 
 #Követelmények:
 
-- [x] Regisztráció
-- [x] Bejelentkezés
-- [x] Adatkezelési nyilatkozat használata
-- [x] Adatok listázása
-- [ ] Több oldalas lista bejárása
-- [ ] Új adat bevitel
-- [ ] Ismételt és sorozatos adatbevitel adatforrásból
-- [ ] Meglévő adat módosítás
-- [ ] Adat vagy adatok törlése
-- [ ] Adatok lementése felületről
-- [x] Kijelentkezés
+- [x] | con_tc_001_test.py | Regisztráció
+- [x] | con_tc_002_test.py | Bejelentkezés
+- [x] | con_tc_003_test.py | Adatkezelési nyilatkozat használata
+- [x] | con_tc_004_test.py | Adatok listázása
+- [ ] | con_tc_005_test.py | Több oldalas lista bejárása
+- [ ] | con_tc_006_test.py | Új adat bevitel
+- [ ] | con_tc_007_test.py | Ismételt és sorozatos adatbevitel adatforrásból
+- [ ] | con_tc_008_test.py | Meglévő adat módosítás
+- [ ] | con_tc_009_test.py | Adat vagy adatok törlése
+- [ ] | con_tc_010_test.py | Adatok lementése felületről
+- [x] | con_tc_011_test.py | Kijelentkezés
 
 ---
 
 #Első hét
 
-- [ ] Manuális tesztesetek a választott alkalmazásra (példánkban a Conduit alkalmazás excel
+- [x] Manuális tesztesetek a választott alkalmazásra (példánkban a Conduit alkalmazás excel
 tesztesetek)
 - [x] A választott alkalmazás ismerete (példánkban a Conduit alkalmazás)
 - [x] A futtatás módjának ismerete és a futtatási környezet (docker, docker-compose)
