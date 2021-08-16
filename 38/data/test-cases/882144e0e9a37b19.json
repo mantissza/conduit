@@ -1,0 +1,149 @@
+{
+  "uid" : "882144e0e9a37b19",
+  "name" : "test_tc_007_content_creation_from_input_file",
+  "fullName" : "tests.con_tc_007_test#test_tc_007_content_creation_from_input_file",
+  "historyId" : "47fc3030426ae18de0ce3a849d3f601f",
+  "time" : {
+    "start" : 1629140999903,
+    "stop" : 1629141121067,
+    "duration" : 121164
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b1b5e02a6ad4107",
+      "name" : "log",
+      "source" : "b1b5e02a6ad4107.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "ff0b9d8b4aa555cf",
+      "name" : "stderr",
+      "source" : "ff0b9d8b4aa555cf.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_007_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-93"
+  }, {
+    "name" : "thread",
+    "value" : "3636-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_007_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "c55749137950db41",
+        "reportUrl" : "https://mantissza.github.io/conduit/37//#testresult/c55749137950db41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629136216379,
+          "stop" : 1629136332652,
+          "duration" : 116273
+        }
+      }, {
+        "uid" : "1774d84ef169fb7f",
+        "reportUrl" : "https://mantissza.github.io/conduit/36//#testresult/1774d84ef169fb7f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629112526152,
+          "stop" : 1629112642292,
+          "duration" : 116140
+        }
+      }, {
+        "uid" : "204014b7d1b3e882",
+        "reportUrl" : "https://mantissza.github.io/conduit/35//#testresult/204014b7d1b3e882",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629111502349,
+          "stop" : 1629111618422,
+          "duration" : 116073
+        }
+      }, {
+        "uid" : "ac7f544926a09361",
+        "reportUrl" : "https://mantissza.github.io/conduit/34//#testresult/ac7f544926a09361",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629106351859,
+          "stop" : 1629106468611,
+          "duration" : 116752
+        }
+      }, {
+        "uid" : "c865a930057e5577",
+        "reportUrl" : "https://mantissza.github.io/conduit/33//#testresult/c865a930057e5577",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099208742,
+          "stop" : 1629099324937,
+          "duration" : 116195
+        }
+      }, {
+        "uid" : "2e5d76f514f3a50d",
+        "reportUrl" : "https://mantissza.github.io/conduit/32//#testresult/2e5d76f514f3a50d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097707279,
+          "stop" : 1629097824034,
+          "duration" : 116755
+        }
+      }, {
+        "uid" : "ba283ac696ca7783",
+        "reportUrl" : "https://mantissza.github.io/conduit/31//#testresult/ba283ac696ca7783",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629096678923,
+          "stop" : 1629096795391,
+          "duration" : 116468
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "882144e0e9a37b19.json",
+  "parameterValues" : [ ]
+}
