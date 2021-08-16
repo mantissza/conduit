@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Aug 16 02:03:56 GMT 2021","Mon Aug 16 02:04:19 GMT 2021","22129","tests","con_tc_004_test","","","","test_tc_004_data_list",""
+"passed","Mon Aug 16 02:04:19 GMT 2021","Mon Aug 16 02:04:31 GMT 2021","12067","tests","con_tc_011_test","","","","test_tc_011_logout",""
+"passed","Mon Aug 16 02:03:50 GMT 2021","Mon Aug 16 02:03:56 GMT 2021","6662","tests","con_tc_003_test","","","","test_tc_003_cookie",""
+"passed","Mon Aug 16 02:03:33 GMT 2021","Mon Aug 16 02:03:50 GMT 2021","16934","tests","con_tc_002_test","","","","test_tc_002_sign_in",""
+"passed","Mon Aug 16 02:03:13 GMT 2021","Mon Aug 16 02:03:33 GMT 2021","20221","tests","con_tc_001_test","","","","test_tc_001_registration",""
