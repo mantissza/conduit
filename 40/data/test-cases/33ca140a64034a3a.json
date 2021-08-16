@@ -1,0 +1,114 @@
+{
+  "uid" : "33ca140a64034a3a",
+  "name" : "test_tc_010_import_data",
+  "fullName" : "tests.con_tc_010_test#test_tc_010_import_data",
+  "historyId" : "440ca87deacfb0e7fa0a4f83757bc3d3",
+  "time" : {
+    "start" : 1629147341114,
+    "stop" : 1629147358545,
+    "duration" : 17431
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\n  - urna-nunc-id-cursus-metus\n  + urna-nunc-id-cursus-metus.\n  ?                          +",
+  "statusTrace" : "def test_tc_010_import_data():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        # A felhasználó profilján található bejegyzések mentése fájlba\n        user_profile_menu = driver.find_element_by_xpath(\"//*[contains(@href,'%s')]\" % test_username)\n        user_profile_menu.click()\n        time.sleep(5)\n    \n        #  Az első oldalon található bejegyzésekre vonatkozó adatok kigyűjtése listába\n        #  Listák listája (Főcím és url)\n        list_of_contents = []\n        title_list = driver.find_elements_by_xpath('//div[@class=\"profile-page\"]//a[contains(@href,\"articles\")]/h1')\n        link_list = driver.find_elements_by_xpath('//div[@class=\"profile-page\"]//a[contains(@href,\"articles\")]')\n    \n        #  Lista feltöltése elemekkel\n        for i in range(len(title_list)):\n            list_of_contents.append([title_list[i].text, link_list[i].get_attribute('href')])\n    \n        #  Lista tartalmának file-ba való kiíratása (sava_data.txt)\n        #  Megj.: Alkalmazott szeparátor: ';' Az első sorban a listaelemek darabszáma van feltüntetve\n        TEST_DATA_DIR = Path(__file__).resolve().parent / 'data'\n        with open(TEST_DATA_DIR / 'save_data.txt', 'w') as f:\n            f.write(\"%s\\n\" % str(len(list_of_contents)))\n            for elem in list_of_contents:\n                f.write(\"%s;%s\\n\" % (elem[0], elem[1]))\n    \n        #  Címhez kapcsolt linkrészlet ellenőrzése.\n        #  (A link a megadott címből képződik oly módon,\n        #  hogy át van alakítva kiskapitálissá, és ' ' helyett '-' karakter szerepel.\n        for i in range(len(list_of_contents)):\n            temp_sublist = list_of_contents[i]\n            temp_formatted_title = temp_sublist[0].lower().replace(' ', '-')\n            temp_formatted_link = str(temp_sublist[1].lower().replace(url + '#/articles/', ''))\n            # print(temp_formatted_title, '==', temp_formatted_link)\n>           assert temp_formatted_title == temp_formatted_link\nE           AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\nE             - urna-nunc-id-cursus-metus\nE             + urna-nunc-id-cursus-metus.\nE             ?                          +\n\ntests/con_tc_010_test.py:71: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\n  - urna-nunc-id-cursus-metus\n  + urna-nunc-id-cursus-metus.\n  ?                          +",
+    "statusTrace" : "def test_tc_010_import_data():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        # A felhasználó profilján található bejegyzések mentése fájlba\n        user_profile_menu = driver.find_element_by_xpath(\"//*[contains(@href,'%s')]\" % test_username)\n        user_profile_menu.click()\n        time.sleep(5)\n    \n        #  Az első oldalon található bejegyzésekre vonatkozó adatok kigyűjtése listába\n        #  Listák listája (Főcím és url)\n        list_of_contents = []\n        title_list = driver.find_elements_by_xpath('//div[@class=\"profile-page\"]//a[contains(@href,\"articles\")]/h1')\n        link_list = driver.find_elements_by_xpath('//div[@class=\"profile-page\"]//a[contains(@href,\"articles\")]')\n    \n        #  Lista feltöltése elemekkel\n        for i in range(len(title_list)):\n            list_of_contents.append([title_list[i].text, link_list[i].get_attribute('href')])\n    \n        #  Lista tartalmának file-ba való kiíratása (sava_data.txt)\n        #  Megj.: Alkalmazott szeparátor: ';' Az első sorban a listaelemek darabszáma van feltüntetve\n        TEST_DATA_DIR = Path(__file__).resolve().parent / 'data'\n        with open(TEST_DATA_DIR / 'save_data.txt', 'w') as f:\n            f.write(\"%s\\n\" % str(len(list_of_contents)))\n            for elem in list_of_contents:\n                f.write(\"%s;%s\\n\" % (elem[0], elem[1]))\n    \n        #  Címhez kapcsolt linkrészlet ellenőrzése.\n        #  (A link a megadott címből képződik oly módon,\n        #  hogy át van alakítva kiskapitálissá, és ' ' helyett '-' karakter szerepel.\n        for i in range(len(list_of_contents)):\n            temp_sublist = list_of_contents[i]\n            temp_formatted_title = temp_sublist[0].lower().replace(' ', '-')\n            temp_formatted_link = str(temp_sublist[1].lower().replace(url + '#/articles/', ''))\n            # print(temp_formatted_title, '==', temp_formatted_link)\n>           assert temp_formatted_title == temp_formatted_link\nE           AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\nE             - urna-nunc-id-cursus-metus\nE             + urna-nunc-id-cursus-metus.\nE             ?                          +\n\ntests/con_tc_010_test.py:71: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8cd0e3b43f658763",
+      "name" : "log",
+      "source" : "8cd0e3b43f658763.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "27847b60b86ca711",
+      "name" : "stderr",
+      "source" : "27847b60b86ca711.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_010_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-878"
+  }, {
+    "name" : "thread",
+    "value" : "3718-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_010_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "2c1770452f193f95",
+        "reportUrl" : "https://mantissza.github.io/conduit/39//#testresult/2c1770452f193f95",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\n  - urna-nunc-id-cursus-metus\n  + urna-nunc-id-cursus-metus.\n  ?                          +",
+        "time" : {
+          "start" : 1629147299592,
+          "stop" : 1629147317022,
+          "duration" : 17430
+        }
+      }, {
+        "uid" : "a4231b130d633fc7",
+        "reportUrl" : "https://mantissza.github.io/conduit/38//#testresult/a4231b130d633fc7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\n  - urna-nunc-id-cursus-metus\n  + urna-nunc-id-cursus-metus.\n  ?                          +",
+        "time" : {
+          "start" : 1629141204550,
+          "stop" : 1629141223045,
+          "duration" : 18495
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "33ca140a64034a3a.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,132 @@
+{
+  "uid" : "ae501d7b9355d2dc",
+  "name" : "test_tc_009_delete_content",
+  "fullName" : "tests.con_tc_009_test#test_tc_009_delete_content",
+  "historyId" : "bc08472d3717aa328b89f00334aac319",
+  "time" : {
+    "start" : 1629147305170,
+    "stop" : 1629147341110,
+    "duration" : 35940
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1f6bfb523d6ae3bf",
+      "name" : "log",
+      "source" : "1f6bfb523d6ae3bf.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "1b2c3934ff211fef",
+      "name" : "stderr",
+      "source" : "1b2c3934ff211fef.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_009_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-878"
+  }, {
+    "name" : "thread",
+    "value" : "3718-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_009_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "681cdfd4666e3cce",
+        "reportUrl" : "https://mantissza.github.io/conduit/39//#testresult/681cdfd4666e3cce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147263559,
+          "stop" : 1629147299587,
+          "duration" : 36028
+        }
+      }, {
+        "uid" : "ff9ae1b8a36ed890",
+        "reportUrl" : "https://mantissza.github.io/conduit/38//#testresult/ff9ae1b8a36ed890",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629141167269,
+          "stop" : 1629141204546,
+          "duration" : 37277
+        }
+      }, {
+        "uid" : "d7f09c34dcd64a8f",
+        "reportUrl" : "https://mantissza.github.io/conduit/37//#testresult/d7f09c34dcd64a8f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629136376874,
+          "stop" : 1629136412830,
+          "duration" : 35956
+        }
+      }, {
+        "uid" : "958a45ed804d5173",
+        "reportUrl" : "https://mantissza.github.io/conduit/36//#testresult/958a45ed804d5173",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629112686482,
+          "stop" : 1629112722256,
+          "duration" : 35774
+        }
+      }, {
+        "uid" : "4d88c7f392951908",
+        "reportUrl" : "https://mantissza.github.io/conduit/35//#testresult/4d88c7f392951908",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False",
+        "time" : {
+          "start" : 1629111662591,
+          "stop" : 1629111698203,
+          "duration" : 35612
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ae501d7b9355d2dc.json",
+  "parameterValues" : [ ]
+}
