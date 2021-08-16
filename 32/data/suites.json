@@ -1,0 +1,145 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "con_tc_001_test",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "207edae00d1cb169",
+        "parentUid" : "89c6a10abdf7e0583c8d8f6a2bc5203b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629097599460,
+          "stop" : 1629097614911,
+          "duration" : 15451
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "89c6a10abdf7e0583c8d8f6a2bc5203b"
+    }, {
+      "name" : "con_tc_002_test",
+      "children" : [ {
+        "name" : "test_tc_002_sign_in",
+        "uid" : "807541992b80df0b",
+        "parentUid" : "ac1cf712f6ddb2e0d2d167c40641c575",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629097615059,
+          "stop" : 1629097625617,
+          "duration" : 10558
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ac1cf712f6ddb2e0d2d167c40641c575"
+    }, {
+      "name" : "con_tc_003_test",
+      "children" : [ {
+        "name" : "test_tc_003_cookie",
+        "uid" : "996c89ccc65c38ef",
+        "parentUid" : "2aa0083e3dbfec7187330989d17ed30f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097625661,
+          "stop" : 1629097632649,
+          "duration" : 6988
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2aa0083e3dbfec7187330989d17ed30f"
+    }, {
+      "name" : "con_tc_004_test",
+      "children" : [ {
+        "name" : "test_tc_004_data_list",
+        "uid" : "6e4299e5849052fd",
+        "parentUid" : "c75144bb29146e22be533dee91c0956b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097632652,
+          "stop" : 1629097657279,
+          "duration" : 24627
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c75144bb29146e22be533dee91c0956b"
+    }, {
+      "name" : "con_tc_005_test",
+      "children" : [ {
+        "name" : "test_tc_005_pages_of_global_feed",
+        "uid" : "ee7ba87d315beb70",
+        "parentUid" : "2579b76919d4805677807129163f429f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097657283,
+          "stop" : 1629097677527,
+          "duration" : 20244
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2579b76919d4805677807129163f429f"
+    }, {
+      "name" : "con_tc_006_test",
+      "children" : [ {
+        "name" : "test_tc_006_content_creation",
+        "uid" : "463888431b4d7d79",
+        "parentUid" : "9dddb482072c1207b2241ce35b65392b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097677531,
+          "stop" : 1629097707275,
+          "duration" : 29744
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9dddb482072c1207b2241ce35b65392b"
+    }, {
+      "name" : "con_tc_007_test",
+      "children" : [ {
+        "name" : "test_tc_007_content_creation_from_input_file",
+        "uid" : "2e5d76f514f3a50d",
+        "parentUid" : "1ea98d76bdc4038079000c28780caa5c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097707279,
+          "stop" : 1629097824034,
+          "duration" : 116755
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1ea98d76bdc4038079000c28780caa5c"
+    }, {
+      "name" : "con_tc_011_test",
+      "children" : [ {
+        "name" : "test_tc_011_logout",
+        "uid" : "3e7c189da0304a71",
+        "parentUid" : "09af07f1c6890741ac980f08d23ec6c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097824037,
+          "stop" : 1629097836414,
+          "duration" : 12377
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "09af07f1c6890741ac980f08d23ec6c6"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ],
+  "name" : "suites"
+}

@@ -1,0 +1,258 @@
+{
+  "uid" : "807541992b80df0b",
+  "name" : "test_tc_002_sign_in",
+  "fullName" : "tests.con_tc_002_test#test_tc_002_sign_in",
+  "historyId" : "bf41b6c323e9d3f4221306768d559586",
+  "time" : {
+    "start" : 1629097615059,
+    "stop" : 1629097625617,
+    "duration" : 10558
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+  "statusTrace" : "def test_tc_002_sign_in():\n    \n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            time.sleep(5)\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n>       sign_in_test_user(test_user)\n\ntests/con_tc_002_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/con_tc_002_test.py:24: in sign_in_test_user\n    sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:394: in find_element_by_xpath\n    return self.find_element(by=By.XPATH, value=xpath)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f329a8215e0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x562e679aae58 \\\\u003Cunknown>\\\\n#16 0x562e679c4dfd \\\\u003Cunknown>\\\\n#17 0x7ffbccafa609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+    "statusTrace" : "def test_tc_002_sign_in():\n    \n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            time.sleep(5)\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n>       sign_in_test_user(test_user)\n\ntests/con_tc_002_test.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/con_tc_002_test.py:24: in sign_in_test_user\n    sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:394: in find_element_by_xpath\n    return self.find_element(by=By.XPATH, value=xpath)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:976: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f329a8215e0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...wn>\\\\n#15 0x562e679aae58 \\\\u003Cunknown>\\\\n#16 0x562e679c4dfd \\\\u003Cunknown>\\\\n#17 0x7ffbccafa609 start_thread\\\\n\"}}'}\n\n    def check_response(self, response):\n        \"\"\"\n        Checks that a JSON response from the WebDriver does not have an error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get('status', None)\n        if status is None or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get('value', None)\n            if value_json and isinstance(value_json, basestring):\n                import json\n                try:\n                    value = json.loads(value_json)\n                    if len(value.keys()) == 1:\n                        value = value['value']\n                    status = value.get('error', None)\n                    if status is None:\n                        status = value[\"status\"]\n                        message = value[\"value\"]\n                        if not isinstance(message, basestring):\n                            value = message\n                            message = message.get('message')\n                    else:\n                        message = value.get('message', None)\n                except ValueError:\n                    pass\n    \n        exception_class = ErrorInResponseException\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif status in ErrorCode.INVALID_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR \\\n                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if value == '' or value is None:\n            value = response['value']\n        if isinstance(value, basestring):\n            if exception_class == ErrorInResponseException:\n                raise exception_class(response, value)\n            raise exception_class(value)\n        if message == \"\" and 'message' in value:\n            message = value['message']\n    \n        screen = None\n        if 'screen' in value:\n            screen = value['screen']\n    \n        stacktrace = None\n        if 'stackTrace' in value and value['stackTrace']:\n            stacktrace = []\n            try:\n                for frame in value['stackTrace']:\n                    line = self._value_or_default(frame, 'lineNumber', '')\n                    file = self._value_or_default(frame, 'fileName', '<anonymous>')\n                    if line:\n                        file = \"%s:%s\" % (file, line)\n                    meth = self._value_or_default(frame, 'methodName', '<anonymous>')\n                    if 'className' in frame:\n                        meth = \"%s.%s\" % (frame['className'], meth)\n                    msg = \"    at %s (%s)\"\n                    msg = msg % (meth, file)\n                    stacktrace.append(msg)\n            except TypeError:\n                pass\n        if exception_class == ErrorInResponseException:\n            raise exception_class(response, message)\n        elif exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if 'data' in value:\n                alert_text = value['data'].get('text')\n            elif 'alert' in value:\n                alert_text = value['alert'].get('text')\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\nE         (Session info: headless chrome=92.0.4515.131)\n\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f2e53631d69315bd",
+      "name" : "log",
+      "source" : "f2e53631d69315bd.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "ca4d0ad2c9b77dde",
+      "name" : "stderr",
+      "source" : "ca4d0ad2c9b77dde.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_002_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az74-944"
+  }, {
+    "name" : "thread",
+    "value" : "3680-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_002_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 16,
+        "unknown" : 0,
+        "total" : 19
+      },
+      "items" : [ {
+        "uid" : "dd5a3219a41dda42",
+        "reportUrl" : "https://mantissza.github.io/conduit/31//#testresult/dd5a3219a41dda42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629096579160,
+          "stop" : 1629096598633,
+          "duration" : 19473
+        }
+      }, {
+        "uid" : "54b1a0c31d245665",
+        "reportUrl" : "https://mantissza.github.io/conduit/30//#testresult/54b1a0c31d245665",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629093682277,
+          "stop" : 1629093701332,
+          "duration" : 19055
+        }
+      }, {
+        "uid" : "90393e0475f2fd4c",
+        "reportUrl" : "https://mantissza.github.io/conduit/29//#testresult/90393e0475f2fd4c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+        "time" : {
+          "start" : 1629092291963,
+          "stop" : 1629092303490,
+          "duration" : 11527
+        }
+      }, {
+        "uid" : "e3577f2cf6e553eb",
+        "reportUrl" : "https://mantissza.github.io/conduit/28//#testresult/e3577f2cf6e553eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629091968622,
+          "stop" : 1629091985710,
+          "duration" : 17088
+        }
+      }, {
+        "uid" : "84842c24cd849b9d",
+        "reportUrl" : "https://mantissza.github.io/conduit/27//#testresult/84842c24cd849b9d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629091038515,
+          "stop" : 1629091055911,
+          "duration" : 17396
+        }
+      }, {
+        "uid" : "ce02e8d05fa9073d",
+        "reportUrl" : "https://mantissza.github.io/conduit/26//#testresult/ce02e8d05fa9073d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629086202317,
+          "stop" : 1629086219737,
+          "duration" : 17420
+        }
+      }, {
+        "uid" : "a686b8436f407c3",
+        "reportUrl" : "https://mantissza.github.io/conduit/25//#testresult/a686b8436f407c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629085585995,
+          "stop" : 1629085602872,
+          "duration" : 16877
+        }
+      }, {
+        "uid" : "8abc4684cced1e53",
+        "reportUrl" : "https://mantissza.github.io/conduit/24//#testresult/8abc4684cced1e53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629081130464,
+          "stop" : 1629081147409,
+          "duration" : 16945
+        }
+      }, {
+        "uid" : "9446b4f9e57892e1",
+        "reportUrl" : "https://mantissza.github.io/conduit/23//#testresult/9446b4f9e57892e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629079413385,
+          "stop" : 1629079430319,
+          "duration" : 16934
+        }
+      }, {
+        "uid" : "9c90121aada7c0e6",
+        "reportUrl" : "https://mantissza.github.io/conduit/22//#testresult/9c90121aada7c0e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629072061007,
+          "stop" : 1629072077941,
+          "duration" : 16934
+        }
+      }, {
+        "uid" : "7418bdd65a9e8ee",
+        "reportUrl" : "https://mantissza.github.io/conduit/21//#testresult/7418bdd65a9e8ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629069288160,
+          "stop" : 1629069305341,
+          "duration" : 17181
+        }
+      }, {
+        "uid" : "259e4e3ef75af81b",
+        "reportUrl" : "https://mantissza.github.io/conduit/20//#testresult/259e4e3ef75af81b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629067470214,
+          "stop" : 1629067487191,
+          "duration" : 16977
+        }
+      }, {
+        "uid" : "a841ddbd38d7ee29",
+        "reportUrl" : "https://mantissza.github.io/conduit/19//#testresult/a841ddbd38d7ee29",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629063768871,
+          "stop" : 1629063786080,
+          "duration" : 17209
+        }
+      }, {
+        "uid" : "450e68ab8941b4a0",
+        "reportUrl" : "https://mantissza.github.io/conduit/18//#testresult/450e68ab8941b4a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629056199822,
+          "stop" : 1629056216805,
+          "duration" : 16983
+        }
+      }, {
+        "uid" : "b1d7f007d7db6be1",
+        "reportUrl" : "https://mantissza.github.io/conduit/17//#testresult/b1d7f007d7db6be1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629051677901,
+          "stop" : 1629051694979,
+          "duration" : 17078
+        }
+      }, {
+        "uid" : "e58416c523105244",
+        "reportUrl" : "https://mantissza.github.io/conduit/16//#testresult/e58416c523105244",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629049041768,
+          "stop" : 1629049053681,
+          "duration" : 11913
+        }
+      }, {
+        "uid" : "fb6b1b40204431c7",
+        "reportUrl" : "https://mantissza.github.io/conduit/15//#testresult/fb6b1b40204431c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629048926319,
+          "stop" : 1629048933414,
+          "duration" : 7095
+        }
+      }, {
+        "uid" : "24a62cb42e33bc83",
+        "reportUrl" : "https://mantissza.github.io/conduit/14//#testresult/24a62cb42e33bc83",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@href='#/login']\"}\n  (Session info: headless chrome=92.0.4515.131)",
+        "time" : {
+          "start" : 1629046333675,
+          "stop" : 1629046335108,
+          "duration" : 1433
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "807541992b80df0b.json",
+  "parameterValues" : [ ]
+}
