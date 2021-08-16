@@ -1,0 +1,91 @@
+[ {
+  "uid" : "576f06ada39cdeaf",
+  "name" : "test_tc_002_sign_in",
+  "time" : {
+    "start" : 1629106251305,
+    "stop" : 1629106270571,
+    "duration" : 19266
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d6b3f6806f8fdff9",
+  "name" : "test_tc_001_registration",
+  "time" : {
+    "start" : 1629106238370,
+    "stop" : 1629106251227,
+    "duration" : 12857
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "15e86d915f7e8bd7",
+  "name" : "test_tc_011_logout",
+  "time" : {
+    "start" : 1629106512932,
+    "stop" : 1629106525208,
+    "duration" : 12276
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c1468c8c0d484f4",
+  "name" : "test_tc_003_cookie",
+  "time" : {
+    "start" : 1629106270575,
+    "stop" : 1629106277456,
+    "duration" : 6881
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "994b76c89ab41341",
+  "name" : "test_tc_005_pages_of_global_feed",
+  "time" : {
+    "start" : 1629106301909,
+    "stop" : 1629106322159,
+    "duration" : 20250
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ac885ae364cf510",
+  "name" : "test_tc_004_data_list",
+  "time" : {
+    "start" : 1629106277462,
+    "stop" : 1629106301903,
+    "duration" : 24441
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ef7df3dcb353810f",
+  "name" : "test_tc_006_content_creation",
+  "time" : {
+    "start" : 1629106322163,
+    "stop" : 1629106351854,
+    "duration" : 29691
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "261019d3ab378320",
+  "name" : "test_tc_008_content_modify",
+  "time" : {
+    "start" : 1629106468614,
+    "stop" : 1629106512928,
+    "duration" : 44314
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ac7f544926a09361",
+  "name" : "test_tc_007_content_creation_from_input_file",
+  "time" : {
+    "start" : 1629106351859,
+    "stop" : 1629106468611,
+    "duration" : 116752
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
