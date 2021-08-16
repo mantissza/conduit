@@ -1,0 +1,11 @@
+10
+Doge mining0;Crypto currency and doge0;Doge doge munch munch0;dogecoin0
+Doge mining1;Crypto currency and doge1;Doge doge munch munch1;dogecoin1
+Doge mining2;Crypto currency and doge2;Doge doge munch munch2;dogecoin2
+Doge mining3;Crypto currency and doge3;Doge doge munch munch3;dogecoin3
+Doge mining4;Crypto currency and doge4;Doge doge munch munch4;dogecoin4
+Doge mining5;Crypto currency and doge5;Doge doge munch munch5;dogecoin5
+Doge mining6;Crypto currency and doge6;Doge doge munch munch6;dogecoin6
+Doge mining7;Crypto currency and doge7;Doge doge munch munch7;dogecoin7
+Doge mining8;Crypto currency and doge8;Doge doge munch munch8;dogecoin8
+Doge mining9;Crypto currency and doge9;Doge doge munch munch9;dogecoin9
