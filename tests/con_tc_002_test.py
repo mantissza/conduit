@@ -10,7 +10,6 @@ chrome_options.add_argument('--disable-gpu')
 
 
 def test_tc_002_sign_in():
-
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
@@ -21,7 +20,8 @@ def test_tc_002_sign_in():
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
         time.sleep(5)
-        sign_in = driver.find_element_by_xpath("//a[@href='#/login']")
+        #  sign_in = driver.find_element_by_xpath("//a[@href='#/login']")
+        sign_in = driver.find_element_by_xpath("/html/body//a[contains(@href,'login')]")
         sign_in.click()
         for i in range(len(user)-1):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i+1])

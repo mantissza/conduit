@@ -12,7 +12,6 @@ chrome_options.add_argument('--disable-gpu')
 
 
 def test_tc_001_registration():
-
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
@@ -51,8 +50,9 @@ def test_tc_001_registration():
     # print(randUser)
 
     time.sleep(5)
-    sign_up = driver.find_element_by_xpath("//a[@href='#/register' and @class='nav-link']")
-    # sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
+    #  sign_up = driver.find_element_by_xpath("//a[@href='#/register' and @class='nav-link']")
+    #  sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
+    sign_up = driver.find_element_by_xpath("/html/body//a[contains(@href,'register')]")
     sign_up.click()
     time.sleep(5)
 
