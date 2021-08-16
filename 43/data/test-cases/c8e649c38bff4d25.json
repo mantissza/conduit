@@ -1,0 +1,167 @@
+{
+  "uid" : "c8e649c38bff4d25",
+  "name" : "test_tc_008_content_modify",
+  "fullName" : "tests.con_tc_008_test#test_tc_008_content_modify",
+  "historyId" : "dbde7614a3af70027d6950b23bf61c0f",
+  "time" : {
+    "start" : 1629157654739,
+    "stop" : 1629157699100,
+    "duration" : 44361
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "62e50ca38f46d6c5",
+      "name" : "log",
+      "source" : "62e50ca38f46d6c5.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "1204bd53c9e80fbc",
+      "name" : "stderr",
+      "source" : "1204bd53c9e80fbc.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_008_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az36-878"
+  }, {
+    "name" : "thread",
+    "value" : "3845-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_008_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 10,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "639e06f52a4a1114",
+        "reportUrl" : "https://mantissza.github.io/conduit/42//#testresult/639e06f52a4a1114",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629151395477,
+          "stop" : 1629151440028,
+          "duration" : 44551
+        }
+      }, {
+        "uid" : "296ca4519a069d7b",
+        "reportUrl" : "https://mantissza.github.io/conduit/41//#testresult/296ca4519a069d7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629150362255,
+          "stop" : 1629150406685,
+          "duration" : 44430
+        }
+      }, {
+        "uid" : "ecac0bbef9cf9558",
+        "reportUrl" : "https://mantissza.github.io/conduit/40//#testresult/ecac0bbef9cf9558",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147260840,
+          "stop" : 1629147305166,
+          "duration" : 44326
+        }
+      }, {
+        "uid" : "8e4a0892a1317c99",
+        "reportUrl" : "https://mantissza.github.io/conduit/39//#testresult/8e4a0892a1317c99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629147220173,
+          "stop" : 1629147263555,
+          "duration" : 43382
+        }
+      }, {
+        "uid" : "35a39e82f409323e",
+        "reportUrl" : "https://mantissza.github.io/conduit/38//#testresult/35a39e82f409323e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629141121071,
+          "stop" : 1629141167265,
+          "duration" : 46194
+        }
+      }, {
+        "uid" : "e06878651dcf8a2c",
+        "reportUrl" : "https://mantissza.github.io/conduit/37//#testresult/e06878651dcf8a2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629136332656,
+          "stop" : 1629136376870,
+          "duration" : 44214
+        }
+      }, {
+        "uid" : "cb6e0ff11bc735c1",
+        "reportUrl" : "https://mantissza.github.io/conduit/36//#testresult/cb6e0ff11bc735c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629112642295,
+          "stop" : 1629112686478,
+          "duration" : 44183
+        }
+      }, {
+        "uid" : "456083053d500e1e",
+        "reportUrl" : "https://mantissza.github.io/conduit/35//#testresult/456083053d500e1e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629111618425,
+          "stop" : 1629111662587,
+          "duration" : 44162
+        }
+      }, {
+        "uid" : "261019d3ab378320",
+        "reportUrl" : "https://mantissza.github.io/conduit/34//#testresult/261019d3ab378320",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629106468614,
+          "stop" : 1629106512928,
+          "duration" : 44314
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c8e649c38bff4d25.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,111 @@
+[ {
+  "uid" : "342f2955d2c25f75",
+  "name" : "test_tc_001_registration",
+  "time" : {
+    "start" : 1629157425764,
+    "stop" : 1629157438269,
+    "duration" : 12505
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c8e649c38bff4d25",
+  "name" : "test_tc_008_content_modify",
+  "time" : {
+    "start" : 1629157654739,
+    "stop" : 1629157699100,
+    "duration" : 44361
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ea207e3b75dc5603",
+  "name" : "test_tc_010_import_data",
+  "time" : {
+    "start" : 1629157734964,
+    "stop" : 1629157752312,
+    "duration" : 17348
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fee46e7a1a5d566e",
+  "name" : "test_tc_007_content_creation_from_input_file",
+  "time" : {
+    "start" : 1629157538547,
+    "stop" : 1629157654736,
+    "duration" : 116189
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e09e20155caaf8",
+  "name" : "test_tc_009_delete_content",
+  "time" : {
+    "start" : 1629157699104,
+    "stop" : 1629157734960,
+    "duration" : 35856
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f328eca2e2c10248",
+  "name" : "test_tc_003_cookie",
+  "time" : {
+    "start" : 1629157457450,
+    "stop" : 1629157464268,
+    "duration" : 6818
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1950a2a892aad03",
+  "name" : "test_tc_002_sign_in",
+  "time" : {
+    "start" : 1629157438373,
+    "stop" : 1629157457446,
+    "duration" : 19073
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4af81286ea890253",
+  "name" : "test_tc_005_pages_of_global_feed",
+  "time" : {
+    "start" : 1629157488581,
+    "stop" : 1629157508868,
+    "duration" : 20287
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b188e94ddf15c9fa",
+  "name" : "test_tc_004_data_list",
+  "time" : {
+    "start" : 1629157464272,
+    "stop" : 1629157488578,
+    "duration" : 24306
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "36df7d94c26e55d0",
+  "name" : "test_tc_006_content_creation",
+  "time" : {
+    "start" : 1629157508871,
+    "stop" : 1629157538544,
+    "duration" : 29673
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fdb34c507e7e186b",
+  "name" : "test_tc_011_logout",
+  "time" : {
+    "start" : 1629157752319,
+    "stop" : 1629157764497,
+    "duration" : 12178
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
