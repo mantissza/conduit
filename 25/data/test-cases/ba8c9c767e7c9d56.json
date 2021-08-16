@@ -1,0 +1,83 @@
+{
+  "uid" : "ba8c9c767e7c9d56",
+  "name" : "test_tc_006_content_creation",
+  "fullName" : "tests.con_tc_006_test#test_tc_006_content_creation",
+  "historyId" : "88672d4475103afecf1460c178fe9d87",
+  "time" : {
+    "start" : 1629085631023,
+    "stop" : 1629085648216,
+    "duration" : 17193
+  },
+  "status" : "broken",
+  "statusMessage" : "ImportError: You must be root to use this library on linux.",
+  "statusTrace" : "def test_tc_006_content_creation():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése.\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Új bejegyzés létrehozása\n        new_article = driver.find_element_by_class_name('ion-compose')\n        new_article.click()\n        time.sleep(5)\n    \n        #  Új bejegyzés űrlap kitöltése\n        input_data_article = ['Doge mining', 'Crypto currency and doge', 'Doge doge munch munch', ['dogecoin']]\n        for i in range(len(input_data_article)-2):\n            driver.find_element_by_xpath(\"//fieldset[@class='form-group'][%i]/input\" % (i + 1)).send_keys(input_data_article[i])\n        driver.find_element_by_xpath(\"//fieldset[@class='form-group'][3]/textarea\").send_keys(input_data_article[2])\n        driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//input').send_keys(input_data_article[3][0])\n>       press('enter')\n\ntests/con_tc_006_test.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:396: in press\n    send(hotkey, True, False)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:379: in send\n    parsed = parse_hotkey(hotkey)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:358: in parse_hotkey\n    steps.append(tuple(key_to_scan_codes(key) for key in keys))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:358: in <genexpr>\n    steps.append(tuple(key_to_scan_codes(key) for key in keys))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:317: in key_to_scan_codes\n    t = tuple(_collections.OrderedDict((scan_code, True) for scan_code, modifier in _os_keyboard.map_name(normalized)))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:317: in <genexpr>\n    t = tuple(_collections.OrderedDict((scan_code, True) for scan_code, modifier in _os_keyboard.map_name(normalized)))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixkeyboard.py:148: in map_name\n    build_tables()\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixkeyboard.py:64: in build_tables\n    ensure_root()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def ensure_root():\n        if os.geteuid() != 0:\n>           raise ImportError('You must be root to use this library on linux.')\nE           ImportError: You must be root to use this library on linux.\n\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixcommon.py:174: ImportError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "ImportError: You must be root to use this library on linux.",
+    "statusTrace" : "def test_tc_006_content_creation():\n        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)\n        url = \"http://localhost:1667/\"\n    \n        ####################################################\n        #               PYTHON FUNCTIONS\n        ####################################################\n    \n        #  Teszt felhasználó belépésének folyamata\n        def sign_in_test_user(user):\n            sign_in = driver.find_element_by_xpath(\"//a[@href='#/login']\")\n            sign_in.click()\n            for i in range(len(user)-1):\n                driver.find_element_by_xpath(\"//fieldset[%i]/input\" % (i + 1)).send_keys(user[i+1])\n            driver.find_element_by_tag_name(\"button\").click()\n    \n        ####################################################\n        #                   SELENIUM\n        ####################################################\n    \n        driver.get(url)\n        time.sleep(5)\n    \n        #  Bemeneti értékek\n        test_username = 'testuser1'\n        test_email = 'testuser1@example.com'\n        test_password = 'Abcd123$'\n        test_user = [test_username, test_email, test_password]\n    \n        #  Űrlap kitöltése\n        sign_in_test_user(test_user)\n    \n        #  Töltőképernyő miatti várakozás\n        time.sleep(5)\n    \n        #  Bejelentkezés sikerének ellenőrzése.\n        excepted_username = test_user[0]\n        current_username = driver.find_element_by_xpath(\"//*[@class='nav-item'][4]/a\").text\n        assert current_username == excepted_username\n    \n        #  Új bejegyzés létrehozása\n        new_article = driver.find_element_by_class_name('ion-compose')\n        new_article.click()\n        time.sleep(5)\n    \n        #  Új bejegyzés űrlap kitöltése\n        input_data_article = ['Doge mining', 'Crypto currency and doge', 'Doge doge munch munch', ['dogecoin']]\n        for i in range(len(input_data_article)-2):\n            driver.find_element_by_xpath(\"//fieldset[@class='form-group'][%i]/input\" % (i + 1)).send_keys(input_data_article[i])\n        driver.find_element_by_xpath(\"//fieldset[@class='form-group'][3]/textarea\").send_keys(input_data_article[2])\n        driver.find_element_by_xpath('//fieldset[@class=\"form-group\"][4]//input').send_keys(input_data_article[3][0])\n>       press('enter')\n\ntests/con_tc_006_test.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:396: in press\n    send(hotkey, True, False)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:379: in send\n    parsed = parse_hotkey(hotkey)\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:358: in parse_hotkey\n    steps.append(tuple(key_to_scan_codes(key) for key in keys))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:358: in <genexpr>\n    steps.append(tuple(key_to_scan_codes(key) for key in keys))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:317: in key_to_scan_codes\n    t = tuple(_collections.OrderedDict((scan_code, True) for scan_code, modifier in _os_keyboard.map_name(normalized)))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/__init__.py:317: in <genexpr>\n    t = tuple(_collections.OrderedDict((scan_code, True) for scan_code, modifier in _os_keyboard.map_name(normalized)))\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixkeyboard.py:148: in map_name\n    build_tables()\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixkeyboard.py:64: in build_tables\n    ensure_root()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def ensure_root():\n        if os.geteuid() != 0:\n>           raise ImportError('You must be root to use this library on linux.')\nE           ImportError: You must be root to use this library on linux.\n\n/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/keyboard/_nixcommon.py:174: ImportError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1fe5c9bf75569299",
+      "name" : "log",
+      "source" : "1fe5c9bf75569299.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "86d173f098beb048",
+      "name" : "stderr",
+      "source" : "86d173f098beb048.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_006_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az83-93"
+  }, {
+    "name" : "thread",
+    "value" : "3671-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_006_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "ba8c9c767e7c9d56.json",
+  "parameterValues" : [ ]
+}
