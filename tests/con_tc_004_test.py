@@ -2,9 +2,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-import tempfile
 from pathlib import Path
-from unittest.mock import patch
 
 chrome_options = Options()
 chrome_options.headless = True
