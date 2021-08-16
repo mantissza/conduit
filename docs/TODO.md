@@ -18,11 +18,11 @@ táblázatos fájlok formájában)
 - [x] | con_tc_002_test.py | Bejelentkezés
 - [x] | con_tc_003_test.py | Adatkezelési nyilatkozat használata
 - [x] | con_tc_004_test.py | Adatok listázása
-- [ ] | con_tc_005_test.py | Több oldalas lista bejárása
-- [ ] | con_tc_006_test.py | Új adat bevitel
-- [ ] | con_tc_007_test.py | Ismételt és sorozatos adatbevitel adatforrásból
-- [ ] | con_tc_008_test.py | Meglévő adat módosítás
-- [ ] | con_tc_009_test.py | Adat vagy adatok törlése
+- [x] | con_tc_005_test.py | Több oldalas lista bejárása
+- [x] | con_tc_006_test.py | Új adat bevitel
+- [x] | con_tc_007_test.py | Ismételt és sorozatos adatbevitel adatforrásból
+- [x] | con_tc_008_test.py | Meglévő adat módosítás
+- [x] | con_tc_009_test.py | Adat vagy adatok törlése
 - [ ] | con_tc_010_test.py | Adatok lementése felületről
 - [x] | con_tc_011_test.py | Kijelentkezés
 
