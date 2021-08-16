@@ -61,12 +61,6 @@ def test_tc_006_content_creation():
         driver.find_element_by_xpath("//fieldset[@class='form-group'][%i]/input" % (i + 1)).send_keys(input_data_article[i])
     driver.find_element_by_xpath("//fieldset[@class='form-group'][3]/textarea").send_keys(input_data_article[2])
     driver.find_element_by_xpath('//fieldset[@class="form-group"][4]//input').send_keys(input_data_article[3][0])
-    #  press('enter')
-    #  time.sleep(3)
-    #  Az imént hozzáadott tag ellenőrzése
-    #  excepted_add_tag = input_data_article[3][0]
-    #  current_add_tag = driver.find_element_by_xpath('//div[@class="ti-tag-center"]/span').text
-    #  assert current_add_tag == excepted_add_tag
 
     #  Bejegyzés feltöltése
     driver.find_element_by_tag_name("button").click()
