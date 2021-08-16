@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(@href,'register')]\"}\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "d0908edcc5183726",
+        "parentUid" : "6fb6ccdc4d0877c9369266a9dfc76a28",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629146982225,
+          "stop" : 1629147001791,
+          "duration" : 19566
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6fb6ccdc4d0877c9369266a9dfc76a28"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'urna-nunc-id-cursus-metus.' == 'urna-nunc-id-cursus-metus'\n  - urna-nunc-id-cursus-metus\n  + urna-nunc-id-cursus-metus.\n  ?                          +",
+      "children" : [ {
+        "name" : "test_tc_010_import_data",
+        "uid" : "2c1770452f193f95",
+        "parentUid" : "d13e491f5384c5c48ac384f558865274",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629147299592,
+          "stop" : 1629147317022,
+          "duration" : 17430
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d13e491f5384c5c48ac384f558865274"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

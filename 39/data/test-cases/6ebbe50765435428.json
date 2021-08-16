@@ -1,0 +1,213 @@
+{
+  "uid" : "6ebbe50765435428",
+  "name" : "test_tc_006_content_creation",
+  "fullName" : "tests.con_tc_006_test#test_tc_006_content_creation",
+  "historyId" : "88672d4475103afecf1460c178fe9d87",
+  "time" : {
+    "start" : 1629147073668,
+    "stop" : 1629147103430,
+    "duration" : 29762
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f684d4f680b7c29f",
+      "name" : "log",
+      "source" : "f684d4f680b7c29f.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "84d2da4c12f84702",
+      "name" : "stderr",
+      "source" : "84d2da4c12f84702.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_006_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az33-581"
+  }, {
+    "name" : "thread",
+    "value" : "3685-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_006_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 14,
+        "unknown" : 0,
+        "total" : 15
+      },
+      "items" : [ {
+        "uid" : "eef069ad3ba01952",
+        "reportUrl" : "https://mantissza.github.io/conduit/38//#testresult/eef069ad3ba01952",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629140969119,
+          "stop" : 1629140999899,
+          "duration" : 30780
+        }
+      }, {
+        "uid" : "d1c946202618d00b",
+        "reportUrl" : "https://mantissza.github.io/conduit/37//#testresult/d1c946202618d00b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629136186695,
+          "stop" : 1629136216376,
+          "duration" : 29681
+        }
+      }, {
+        "uid" : "355b17e2d3d901c3",
+        "reportUrl" : "https://mantissza.github.io/conduit/36//#testresult/355b17e2d3d901c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629112496566,
+          "stop" : 1629112526148,
+          "duration" : 29582
+        }
+      }, {
+        "uid" : "f65b10ee3e3dcd4",
+        "reportUrl" : "https://mantissza.github.io/conduit/35//#testresult/f65b10ee3e3dcd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629111472784,
+          "stop" : 1629111502347,
+          "duration" : 29563
+        }
+      }, {
+        "uid" : "ef7df3dcb353810f",
+        "reportUrl" : "https://mantissza.github.io/conduit/34//#testresult/ef7df3dcb353810f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629106322163,
+          "stop" : 1629106351854,
+          "duration" : 29691
+        }
+      }, {
+        "uid" : "b07c4d8e224dd59f",
+        "reportUrl" : "https://mantissza.github.io/conduit/33//#testresult/b07c4d8e224dd59f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099179134,
+          "stop" : 1629099208738,
+          "duration" : 29604
+        }
+      }, {
+        "uid" : "463888431b4d7d79",
+        "reportUrl" : "https://mantissza.github.io/conduit/32//#testresult/463888431b4d7d79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629097677531,
+          "stop" : 1629097707275,
+          "duration" : 29744
+        }
+      }, {
+        "uid" : "6f69e0499c9ea60d",
+        "reportUrl" : "https://mantissza.github.io/conduit/31//#testresult/6f69e0499c9ea60d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629096649288,
+          "stop" : 1629096678919,
+          "duration" : 29631
+        }
+      }, {
+        "uid" : "1be2398937809511",
+        "reportUrl" : "https://mantissza.github.io/conduit/30//#testresult/1be2398937809511",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629093750711,
+          "stop" : 1629093780373,
+          "duration" : 29662
+        }
+      }, {
+        "uid" : "b3e6ecc8080f7538",
+        "reportUrl" : "https://mantissza.github.io/conduit/29//#testresult/b3e6ecc8080f7538",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629092351343,
+          "stop" : 1629092378894,
+          "duration" : 27551
+        }
+      }, {
+        "uid" : "a28e929168507444",
+        "reportUrl" : "https://mantissza.github.io/conduit/28//#testresult/a28e929168507444",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629092033180,
+          "stop" : 1629092060600,
+          "duration" : 27420
+        }
+      }, {
+        "uid" : "80ce3b521e69e703",
+        "reportUrl" : "https://mantissza.github.io/conduit/27//#testresult/80ce3b521e69e703",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629091103273,
+          "stop" : 1629091130836,
+          "duration" : 27563
+        }
+      }, {
+        "uid" : "70c521ba607d3d5",
+        "reportUrl" : "https://mantissza.github.io/conduit/26//#testresult/70c521ba607d3d5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629086249055,
+          "stop" : 1629086276570,
+          "duration" : 27515
+        }
+      }, {
+        "uid" : "ba8c9c767e7c9d56",
+        "reportUrl" : "https://mantissza.github.io/conduit/25//#testresult/ba8c9c767e7c9d56",
+        "status" : "broken",
+        "statusDetails" : "ImportError: You must be root to use this library on linux.",
+        "time" : {
+          "start" : 1629085631023,
+          "stop" : 1629085648216,
+          "duration" : 17193
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6ebbe50765435428.json",
+  "parameterValues" : [ ]
+}
