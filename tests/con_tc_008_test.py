@@ -2,7 +2,6 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-from pathlib import Path
 
 
 chrome_options = Options()
@@ -13,10 +12,6 @@ chrome_options.add_argument('--disable-gpu')
 def test_tc_008_content_modify():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
-
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
 
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
@@ -60,10 +55,6 @@ def test_tc_008_content_modify():
         #  Bejegyzés feltöltése
         driver.find_element_by_tag_name("button").click()
         time.sleep(5)
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

@@ -14,10 +14,6 @@ def test_tc_007_content_creation_from_input_file():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
-
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
         sign_in = driver.find_element_by_xpath("//a[@href='#/login']")
@@ -59,10 +55,6 @@ def test_tc_007_content_creation_from_input_file():
         excepted_article_tag_list = input_data_article[3]
         current_article_tag_list = driver.find_element_by_xpath('//div[@class="tag-list"]/a[1]').text
         assert current_article_tag_list == excepted_article_tag_list
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

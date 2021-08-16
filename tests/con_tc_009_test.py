@@ -14,10 +14,6 @@ def test_tc_009_delete_content():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
-
     #  Létezik e a keresett xpath? fg
     def check_exists_by_xpath(xpath):
         try:
@@ -66,10 +62,6 @@ def test_tc_009_delete_content():
         #  Bejegyzés feltöltése
         driver.find_element_by_tag_name("button").click()
         time.sleep(5)
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

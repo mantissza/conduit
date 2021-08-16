@@ -9,12 +9,9 @@ chrome_options.add_argument('--disable-gpu')
 
 
 def test_tc_005_pages_of_global_feed():
+
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
-
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
 
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
@@ -23,10 +20,6 @@ def test_tc_005_pages_of_global_feed():
         for i in range(len(user) - 1):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i + 1])
         driver.find_element_by_tag_name("button").click()
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

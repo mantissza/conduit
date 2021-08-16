@@ -1,6 +1,7 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 import time
 import random
 import string
@@ -15,10 +16,6 @@ def test_tc_001_registration():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
-
     #  Random karaktersor generátor.
     def charset_rand(length):
         result = ''
@@ -32,9 +29,13 @@ def test_tc_001_registration():
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i])
         driver.find_element_by_tag_name("button").click()
 
-    ####################################################
-    #                   SELENIUM
-    ####################################################
+    #  Létezik e a keresett xpath? fg
+    def check_exists_by_xpath(xpath):
+        try:
+            driver.find_element_by_xpath(xpath)
+        except NoSuchElementException:
+            return False
+        return True
 
     driver.get(url)
     time.sleep(5)
@@ -50,11 +51,16 @@ def test_tc_001_registration():
     # print(randUser)
 
     time.sleep(5)
-    #  sign_up = driver.find_element_by_xpath("//a[@href='#/register' and @class='nav-link']")
-    #  sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
-    sign_up = driver.find_element_by_xpath("//a[contains(@href,'register')]")
+    sign_up = driver.find_element_by_xpath("//*[contains(@href,'register')]")
     sign_up.click()
     time.sleep(5)
+    sign_up.click()
+    #  sign_up = driver.find_element_by_xpath("//a[@href='#/register' and @class='nav-link']")
+    #  sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
+    if check_exists_by_xpath("//i[contains(@class,'ion-android-exit')]"):
+        driver.find_element_by_class_name('ion-android-exit').click()
+        time.sleep(5)
+        sign_up.click()
 
     #  Űrlap kitöltése
     add_new_user(rand_user)

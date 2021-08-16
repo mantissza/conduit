@@ -2,9 +2,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-import tempfile
 from pathlib import Path
-from unittest.mock import patch
 
 
 chrome_options = Options()
@@ -15,10 +13,6 @@ chrome_options.add_argument('--disable-gpu')
 def test_tc_011_logout():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
-
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
 
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
@@ -54,10 +48,6 @@ def test_tc_011_logout():
         for i in range(len(current_nav_item_list)):
             #  print(current_nav_item_list[i] + "==" + excepted_nav_item_list[i])
             assert current_nav_item_list[i] == excepted_nav_item_list[i]
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

@@ -13,16 +13,6 @@ def test_tc_003_cookie():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-
-####################################################
-#               PYTHON FUNCTIONS
-####################################################
-
-
-####################################################
-#                   SELENIUM
-####################################################
-
     driver.get(url)
     time.sleep(5)
 

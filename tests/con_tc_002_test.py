@@ -13,10 +13,6 @@ def test_tc_002_sign_in():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
-
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
         time.sleep(5)
@@ -26,10 +22,6 @@ def test_tc_002_sign_in():
         for i in range(len(user)-1):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i+1])
         driver.find_element_by_tag_name("button").click()
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)

@@ -2,7 +2,6 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
-#  from keyboard import press
 
 
 chrome_options = Options()
@@ -14,10 +13,6 @@ def test_tc_006_content_creation():
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     url = "http://localhost:1667/"
 
-    ####################################################
-    #               PYTHON FUNCTIONS
-    ####################################################
-
     #  Teszt felhasználó belépésének folyamata
     def sign_in_test_user(user):
         sign_in = driver.find_element_by_xpath("//a[@href='#/login']")
@@ -25,10 +20,6 @@ def test_tc_006_content_creation():
         for i in range(len(user)-1):
             driver.find_element_by_xpath("//fieldset[%i]/input" % (i + 1)).send_keys(user[i+1])
         driver.find_element_by_tag_name("button").click()
-
-    ####################################################
-    #                   SELENIUM
-    ####################################################
 
     driver.get(url)
     time.sleep(5)
