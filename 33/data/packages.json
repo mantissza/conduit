@@ -1,0 +1,145 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "con_tc_001_test",
+      "children" : [ {
+        "name" : "test_tc_001_registration",
+        "uid" : "f08bb4f3103b27bd",
+        "parentUid" : "cfec89e45f10dace966502460ee11758",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099077570,
+          "stop" : 1629099111685,
+          "duration" : 34115
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cfec89e45f10dace966502460ee11758"
+    }, {
+      "name" : "con_tc_002_test",
+      "children" : [ {
+        "name" : "test_tc_002_sign_in",
+        "uid" : "cf7c3ad70090f19a",
+        "parentUid" : "10bc4ce3e3903a56738c683838a247b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099111697,
+          "stop" : 1629099130802,
+          "duration" : 19105
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "10bc4ce3e3903a56738c683838a247b3"
+    }, {
+      "name" : "con_tc_003_test",
+      "children" : [ {
+        "name" : "test_tc_003_cookie",
+        "uid" : "c6d49c81821f7d3e",
+        "parentUid" : "c6cdb543ae87b36e6598ad2f114b15e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099130805,
+          "stop" : 1629099136579,
+          "duration" : 5774
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c6cdb543ae87b36e6598ad2f114b15e7"
+    }, {
+      "name" : "con_tc_004_test",
+      "children" : [ {
+        "name" : "test_tc_004_data_list",
+        "uid" : "8e1ba1e9c6cf126f",
+        "parentUid" : "1d2201dd6bbae0a8dc1254638127e92c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099136583,
+          "stop" : 1629099159909,
+          "duration" : 23326
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1d2201dd6bbae0a8dc1254638127e92c"
+    }, {
+      "name" : "con_tc_005_test",
+      "children" : [ {
+        "name" : "test_tc_005_pages_of_global_feed",
+        "uid" : "8a7c791be95c9943",
+        "parentUid" : "6f9ac687c7f4243fc88669bc9ffb6035",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099159914,
+          "stop" : 1629099179131,
+          "duration" : 19217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f9ac687c7f4243fc88669bc9ffb6035"
+    }, {
+      "name" : "con_tc_006_test",
+      "children" : [ {
+        "name" : "test_tc_006_content_creation",
+        "uid" : "b07c4d8e224dd59f",
+        "parentUid" : "3d025f226eb12798fb33829722115a23",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099179134,
+          "stop" : 1629099208738,
+          "duration" : 29604
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3d025f226eb12798fb33829722115a23"
+    }, {
+      "name" : "con_tc_007_test",
+      "children" : [ {
+        "name" : "test_tc_007_content_creation_from_input_file",
+        "uid" : "c865a930057e5577",
+        "parentUid" : "c34012325e4f84945556f8fb2da10fea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099208742,
+          "stop" : 1629099324937,
+          "duration" : 116195
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c34012325e4f84945556f8fb2da10fea"
+    }, {
+      "name" : "con_tc_011_test",
+      "children" : [ {
+        "name" : "test_tc_011_logout",
+        "uid" : "ff01e65745b22fcc",
+        "parentUid" : "35ea9b15ef018400deb875dc707b1b3f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629099324941,
+          "stop" : 1629099336201,
+          "duration" : 11260
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "35ea9b15ef018400deb875dc707b1b3f"
+    } ],
+    "uid" : "bf49149a3821e34f7608bb6885d52868"
+  } ],
+  "name" : "packages"
+}

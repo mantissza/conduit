@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Sun Aug 15 16:01:06 GMT 2021","Sun Aug 15 16:01:09 GMT 2021","2673","tests","con_tc_001_test","","","","test_tc_001_registration",""
