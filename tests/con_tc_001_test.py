@@ -51,7 +51,7 @@ def test_tc_001_registration():
     # print(randUser)
 
     time.sleep(5)
-    sign_up = driver.find_element_by_xpath('//a[@href="#/register"]')
+    sign_up = driver.find_element_by_xpath("//a[@href='#/register' and @class='nav-link']")
     # sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
     sign_up.click()
     time.sleep(5)
