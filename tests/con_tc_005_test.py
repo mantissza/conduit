@@ -63,5 +63,10 @@ def test_tc_005_pages_of_global_feed():
         #  Ellenőrizzük, hogy az aktuálisan klikkelt link kerül-e kiválasztásra (active class státuszba)
         assert current_page.get_attribute('class') == 'page-item active'
 
+    #  KIJELENTKEZÉS
+    log_out_icon = driver.find_element_by_class_name('ion-android-exit')
+    log_out_icon.click()
+    time.sleep(2)
+
     #  Böngésző bezárása
     driver.close()

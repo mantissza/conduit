@@ -51,5 +51,10 @@ def test_tc_002_sign_in():
     current_username = driver.find_element_by_xpath("//*[@class='nav-item'][4]/a").text
     assert current_username == excepted_username
 
+    #  KIJELENTKEZÉS
+    log_out_icon = driver.find_element_by_class_name('ion-android-exit')
+    log_out_icon.click()
+    time.sleep(2)
+
     #  Böngésző bezárása
     driver.close()

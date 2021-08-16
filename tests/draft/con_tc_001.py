@@ -72,5 +72,9 @@ try:
     assert current_username == excepted_username
 
 finally:
+    #  KIJELENTKEZÉS
+    log_out_icon = driver.find_element_by_class_name('ion-android-exit')
+    log_out_icon.click()
+    time.sleep(2)
     #  Böngésző bezárása
     driver.close()

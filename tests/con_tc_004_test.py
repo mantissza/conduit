@@ -86,5 +86,10 @@ def test_tc_004_data_list():
         #  print(current_content_title_list[i] + "==" + excepted_content_title_list[i])
         assert current_content_title_list[i] == excepted_content_title_list[i]
 
+    #  KIJELENTKEZÉS
+    log_out_icon = driver.find_element_by_class_name('ion-android-exit')
+    log_out_icon.click()
+    time.sleep(2)
+
     #  Böngésző bezárása
     driver.close()

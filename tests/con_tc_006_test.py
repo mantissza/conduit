@@ -81,6 +81,11 @@ def test_tc_006_content_creation():
     current_article_tag_list = driver.find_element_by_xpath('//div[@class="tag-list"]/a[1]').text
     assert current_article_tag_list == excepted_article_tag_list
 
+    #  KIJELENTKEZÉS
+    log_out_icon = driver.find_element_by_class_name('ion-android-exit')
+    log_out_icon.click()
+    time.sleep(2)
+
     #  Böngésző bezárása
     driver.close()
 
