@@ -50,7 +50,9 @@ def test_tc_001_registration():
     rand_user = [rand_username, rand_email, rand_password]
     # print(randUser)
 
-    sign_up = driver.find_element_by_xpath('//a[@href="#/register"]')
+    time.sleep(5)
+    #  sign_up = driver.find_element_by_xpath('//a[@href="#/register"]')
+    sign_up = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a')
     sign_up.click()
     time.sleep(5)
 
