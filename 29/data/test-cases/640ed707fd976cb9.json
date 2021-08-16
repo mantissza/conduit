@@ -1,0 +1,194 @@
+{
+  "uid" : "640ed707fd976cb9",
+  "name" : "test_tc_004_data_list",
+  "fullName" : "tests.con_tc_004_test#test_tc_004_data_list",
+  "historyId" : "6f846e44e75602950309c4fbe5921b52",
+  "time" : {
+    "start" : 1629092310577,
+    "stop" : 1629092333077,
+    "duration" : 22500
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c9bd29851d270648",
+      "name" : "log",
+      "source" : "c9bd29851d270648.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "27ec088be27485be",
+      "name" : "stdout",
+      "source" : "27ec088be27485be.txt",
+      "type" : "text/plain",
+      "size" : 25
+    }, {
+      "uid" : "b3cca58b3c74f47",
+      "name" : "stderr",
+      "source" : "b3cca58b3c74f47.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "con_tc_004_test"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-942"
+  }, {
+    "name" : "thread",
+    "value" : "3622-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.con_tc_004_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "b128dc0c7c67f004",
+        "reportUrl" : "https://mantissza.github.io/conduit/28//#testresult/b128dc0c7c67f004",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629091992683,
+          "stop" : 1629092015043,
+          "duration" : 22360
+        }
+      }, {
+        "uid" : "92744500eb5eb164",
+        "reportUrl" : "https://mantissza.github.io/conduit/27//#testresult/92744500eb5eb164",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629091062707,
+          "stop" : 1629091085088,
+          "duration" : 22381
+        }
+      }, {
+        "uid" : "901259bd282a2a18",
+        "reportUrl" : "https://mantissza.github.io/conduit/26//#testresult/901259bd282a2a18",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629086226643,
+          "stop" : 1629086249051,
+          "duration" : 22408
+        }
+      }, {
+        "uid" : "a73cc986cb38537d",
+        "reportUrl" : "https://mantissza.github.io/conduit/25//#testresult/a73cc986cb38537d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629085608694,
+          "stop" : 1629085631019,
+          "duration" : 22325
+        }
+      }, {
+        "uid" : "112b5d1658b79a10",
+        "reportUrl" : "https://mantissza.github.io/conduit/24//#testresult/112b5d1658b79a10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629081154145,
+          "stop" : 1629081176463,
+          "duration" : 22318
+        }
+      }, {
+        "uid" : "52332fc1d95eab9",
+        "reportUrl" : "https://mantissza.github.io/conduit/23//#testresult/52332fc1d95eab9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629079436988,
+          "stop" : 1629079459117,
+          "duration" : 22129
+        }
+      }, {
+        "uid" : "fab0ff42b804c94b",
+        "reportUrl" : "https://mantissza.github.io/conduit/22//#testresult/fab0ff42b804c94b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629072084710,
+          "stop" : 1629072107012,
+          "duration" : 22302
+        }
+      }, {
+        "uid" : "6b27884f0be13c19",
+        "reportUrl" : "https://mantissza.github.io/conduit/21//#testresult/6b27884f0be13c19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629069312092,
+          "stop" : 1629069334394,
+          "duration" : 22302
+        }
+      }, {
+        "uid" : "884da5043deaeab7",
+        "reportUrl" : "https://mantissza.github.io/conduit/20//#testresult/884da5043deaeab7",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\PycharmProjects\\\\conduit\\\\tests\\\\titles.txt'",
+        "time" : {
+          "start" : 1629067493891,
+          "stop" : 1629067516110,
+          "duration" : 22219
+        }
+      }, {
+        "uid" : "16ee9ced079750bc",
+        "reportUrl" : "https://mantissza.github.io/conduit/19//#testresult/16ee9ced079750bc",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'",
+        "time" : {
+          "start" : 1629063792856,
+          "stop" : 1629063815148,
+          "duration" : 22292
+        }
+      }, {
+        "uid" : "96974949f9abe565",
+        "reportUrl" : "https://mantissza.github.io/conduit/18//#testresult/96974949f9abe565",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'titles.txt'",
+        "time" : {
+          "start" : 1629056223546,
+          "stop" : 1629056244726,
+          "duration" : 21180
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "640ed707fd976cb9.json",
+  "parameterValues" : [ ]
+}
